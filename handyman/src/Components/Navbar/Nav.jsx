@@ -2,9 +2,9 @@ import './Nav.css'
 
 function Navbar () {
   return(
-    <div className="navbar">
+    <nav className='container'>
       <img className="logo" src="" alt="logo" />
-      <div className="nav-links">
+      
         <ul>
           <li>Home</li>
           <li>Services</li>
@@ -12,8 +12,7 @@ function Navbar () {
           <li>About Us</li>
           <li>Get Started</li>
         </ul>
-      </div>
-    </div>  
+    </nav>  
 
   )
 }
