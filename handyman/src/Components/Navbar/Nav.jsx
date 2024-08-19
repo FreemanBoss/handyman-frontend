@@ -1,4 +1,4 @@
-
+import './Nav.css'
 
 function Navbar () {
   return(
@@ -17,3 +17,5 @@ function Navbar () {
 
   )
 }
+
+export default Navbar;
