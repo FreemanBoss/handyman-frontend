@@ -1,7 +1,7 @@
 import React from 'react';
 import Navbar from './Components/Navbar/Nav';
 import Hero from './Components/Hero/Hero';
-import Services from './Components/Services/Service';
+import Services from './Components/Services/Services.jsx';
 
 function App() {
 
