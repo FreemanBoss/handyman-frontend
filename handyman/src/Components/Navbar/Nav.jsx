@@ -1,5 +1,6 @@
 import './Nav.css'
 
+
 function Navbar () {
   return(
     <nav className='container'>
@@ -10,7 +11,7 @@ function Navbar () {
           <li>Services</li>
           <li>Review</li>
           <li>About Us</li>
-          <li>Get Started</li>
+          <li><button className='btn'>Get Started</button></li>
         </ul>
     </nav>  
 

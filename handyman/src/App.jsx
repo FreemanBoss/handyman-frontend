@@ -1,10 +1,16 @@
 import React from 'react';
-import Navbar from './Components/Navbar/Nav'
+import Navbar from './Components/Navbar/Nav';
+import Hero from './Components/Hero/Hero';
+import Services from './Components/Services/Service';
 
 function App() {
 
   return(
-    <Navbar />
+    <>
+      <Navbar />
+      <Hero />
+      <Services />
+    </>
   )
 }
 

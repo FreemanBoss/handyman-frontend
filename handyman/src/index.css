@@ -10,5 +10,16 @@ body {
 }
 
 .container {
-  padding: 0 10px 0 10px;
+  padding: 0 30px;
+}
+
+.btn {
+  background-color: #fff;
+  border: none;
+  color: #ba671f;
+  padding: 10px;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: 500;
+
 }
