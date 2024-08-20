@@ -1,0 +1,21 @@
+.reviews {
+  position: relative;
+}
+
+
+.next-btn,
+.prev-btn {
+  border-radius: 50%;
+  background-color: #aa6010;
+  width: 50px;
+  padding: 10,px;
+  position:absolute;
+  top: 50%;
+  right: 0;
+  
+}
+
+.prev-btn {
+  left: 0;
+  
+}
