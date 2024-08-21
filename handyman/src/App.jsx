@@ -1,21 +1,21 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-
-import Navbar from './Components/Navbar/Nav';
-import Hero from './Components/Hero/Hero';
-import Services from './Components/Services/Services.jsx';
-import Reviews from './Components/Reviews/Reviews.jsx';
+import React from 'react'; 
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import HomePage from './Pages/Home.jsx';
+import LoginSignup from './Pages/Login-Signup/Login-Signup.jsx';
 
 function App() {
 
   return(
-    <>
-      <Navbar />
-      <Hero />
-      <Services />
-      <Reviews />
-    </>
+    <Router>
+      
+      <Routes>
+        <Route path="/" element={<HomePage />}/>
+        <Route path="/get-started" element={<LoginSignup />}/>
+      </Routes>
+      
+      
+    </Router>
   )
 }
 
-export default App
+export default App;
