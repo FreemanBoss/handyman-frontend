@@ -1,7 +1,7 @@
 
 import './Nav.css';
-import { Link } from 'react-scroll';
-
+import { Link as ScrollLink } from 'react-scroll';
+import {Link as RouterLink} from 'react-router-dom'
 
 function Navbar () {
   return(
@@ -11,26 +11,26 @@ function Navbar () {
         <ul>
           
           <li>
-           <Link to= "hero" spy={true} smooth={true} offset={50} duration={500}>Home</Link>
+           <ScrollLink to= "hero" spy={true} smooth={true} offset={50} duration={500}>Home</ScrollLink>
           </li>
           
           <li>
-            <Link to="services" spy={true} smooth={true} offset={50} duration={500}>Services</Link>
+            <ScrollLink to="services" spy={true} smooth={true} offset={50} duration={500}>Services</ScrollLink>
 
           </li>
 
           <li>
-            <Link to="reviews" spy={true} smooth={true} offset={50} duration={500}>Review</Link>
+            <ScrollLink to="reviews" spy={true} smooth={true} offset={50} duration={500}>Review</ScrollLink>
           </li>
 
           <li>
-          <Link to="footer" spy={true} smooth={true} offset={50} duration={500}>About Us</Link>
+          <ScrollLink to="footer" spy={true} smooth={true} offset={50} duration={500}>About Us</ScrollLink>
           </li>
           
           <li>
-           <Link to="/get-started">
+           <RouterLink to="/get-started">
             <button className='btn'>Get Started</button>
-          </Link>
+          </RouterLink>
             </li>
         </ul>
         
