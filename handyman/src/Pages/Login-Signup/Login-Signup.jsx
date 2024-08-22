@@ -3,23 +3,26 @@ import './Login-Signup.css';
 
 const LoginSignup = () => {
   return (
-    <div className='container'>
+    <div className='body'>
+    <div className='login-container'>
       
       <div className='header'>
+        Login
+        <div className='underline'></div>
       </div>
 
       <div className='inputs'>
         
         <div className='input'>
-          <input type='text'/>
+          <input type='text' placeholder='Username'/>
         </div>
 
         <div className='input'>
-          <input type='text'/>
+          <input type='email' placeholder='Email'/>
         </div>
 
         <div className='input'>
-          <input type='password'/>
+          <input type='password' placeholder='Password'/>
         </div>
         
       </div>
@@ -27,11 +30,13 @@ const LoginSignup = () => {
       <div className='forgot-password'>
         Forgot Password?<span>Click Here!</span>
       </div>
+      
       <div className='submit-container'>
         <button className='submit'>Login</button>
         <button className='submit'>SignUp</button>
       </div>
       
+    </div>
     </div>
 
   )
