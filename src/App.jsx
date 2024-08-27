@@ -5,6 +5,8 @@ import LoginPage from './Pages/auth/login.page.jsx';
 import  Navbar  from './Components/Navbar/Navbar.component.jsx';
 import SignUpPage from './Pages/auth/signup.page.jsx';
 
+
+
 function App() {
 
   return(
