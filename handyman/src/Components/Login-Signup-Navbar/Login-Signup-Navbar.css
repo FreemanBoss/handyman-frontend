@@ -1,0 +1,30 @@
+.login-nav {
+    width: 100%;
+    background-color: #ba671f;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    
+  }
+  
+.login-nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 5px 20px;
+    font-size: 16px;
+    font-weight: 800;
+    cursor: pointer;
+  }
+  
+  
+
+.logo_2 {
+    width: 15%;
+    padding-left: 40px;
+    cursor: pointer;
+}

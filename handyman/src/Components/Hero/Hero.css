@@ -1,0 +1,19 @@
+.hero {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(
+    rgba(172, 101, 39, 0.4),
+    rgba(172, 101, 39, 0.4)),
+    url('../../images/hero_image.png');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-text {
+  text-align: center;
+  color: #fff;
+}

@@ -24,6 +24,7 @@ jobs:
         with:
           node-version: '18'
 
+
       - name: Install dependencies with npm ci or npm install
         run: |
           if [ -f package-lock.json ]; then
@@ -41,8 +42,9 @@ jobs:
         run: npm run build
         working-directory: handyman
 
-      - name: Upload production-ready build as artifact
+     - name: Upload production-ready build as artifact
         uses: actions/upload-artifact@v3
         with:
           name: build
           path: handyman/build/
+

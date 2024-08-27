@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+body {
+  background: #f5f5f5f5;
+}
+
+.container {
+  padding: 0 70px;
+}
+
+.btn {
+  background-color: #fff;
+  border: none;
+  color: #ba671f;
+  padding: 10px;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
