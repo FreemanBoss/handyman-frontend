@@ -1,21 +1,7 @@
-import React from "react";
-import LoginForm from "../../Components/Auth/Login.auth";
 import loginImage from "../../assets/images/login.jpg";
-// import logoImage from "../../assets/images/logov2.png";
-import { Image } from "@chakra-ui/react";
 import SignUpForm from '../../Components/Auth/siginup.component.auth'
 
 const SignUpPage = () => {
-//   let GoogleLogin: string | undefined;
-//   if (import.meta.env.VITE_MODE === "prod") {
-//     GoogleLogin = import.meta.env.VITE_BACK_END_PROD as string;
-//   }
-//   if (import.meta.env.VITE_MODE === "dev") {
-//     GoogleLogin = import.meta.env.VITE_BACK_END_DEV as string;
-//   }
-//   if (import.meta.env.VITE_MODE === "local") {
-//     GoogleLogin = import.meta.env.VITE_BACK_END_LOCAL as string;
-//   }
 
   return (
       
