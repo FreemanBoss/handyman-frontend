@@ -16,13 +16,19 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
+      - name: Navigate to subfolder
+        working-directory: handyman
+
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '18'
 
+      - name: Generate package-lock.json
+        run: npm install --package-lock-only  # This will generate package-lock.json if it's missing
+
       - name: Install dependencies
-        run: npm install  # Changed from npm ci to npm install
+        run: npm ci  # or use npm install if package-lock.json is not present
 
       - name: Lint code
         run: npm run lint
