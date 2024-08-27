@@ -15,10 +15,6 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-
-      - name: Navigate to subfolder
-        working-directory: handyman/  # Updated to the 'handyman' folder
-
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
