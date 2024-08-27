@@ -10,10 +10,13 @@ function Navbar () {
   const [navcolor, setnavcolor] = useState(false);
 
   useEffect (() =>{
+    window.addEventListener('scroll', ()=> {
+      window.scrollY > 600 ? setnavcolor(true) : setnavcolor(false)
+    })
     
   }, [])
   return(
-    <nav className= 'container'>
+    <nav className= {`container ${navcolor ? 'darknav' : ''}`}>
       <img className="logo" src={logo} alt="logo" />
 
         <ul>

@@ -9,7 +9,8 @@ nav {
   position: fixed;
   top: 0;
   left: 0;
-  
+  transition: 0.5s;
+  z-index: 15;
 }
 
 nav ul li {
@@ -27,6 +28,7 @@ nav ul li {
     width: 5%;
   }
 
- .dark_nav {
+ .darknav {
   background-color: #ba671f;
+  transition: 0.5s;
 } 

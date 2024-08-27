@@ -9,11 +9,11 @@
   width: 100%;
   display: block;
   border-radius: 10px;
-  position: relative;
+  /* position: relative; */
 }
 .service {
   flex-basis: 31%;
-  position: relative;
+   position: relative; 
 }
 
 .caption {
