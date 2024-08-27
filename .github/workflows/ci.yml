@@ -21,8 +21,11 @@ jobs:
         with:
           node-version: '18'
 
+      - name: Generate package-lock.json
+        run: npm install --package-lock-only  # This will generate package-lock.json if it's missing
+
       - name: Install dependencies
-        run: npm ci
+        run: npm ci  # Now npm ci will work because package-lock.json exists
 
       - name: Lint code
         run: npm run lint
