@@ -1,8 +1,13 @@
 
 import './Login-Signup.css';
+import LoginSignupNavbar from '../../Components/Login-Signup-Navbar/Login-Signup-Navbar.jsx'
 
 const LoginSignup = () => {
+
   return (
+    <>
+    <LoginSignupNavbar />
+    
     <div className='body'>
     <div className='login-container'>
       
@@ -38,7 +43,7 @@ const LoginSignup = () => {
       
     </div>
     </div>
-
+    </>
   )
 }
 
