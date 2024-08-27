@@ -1,6 +1,6 @@
 nav {
   width: 100%;
-  background-color: #ba671f;
+  /* background-color: #ba671f; */
   color: #fff;
   display: flex;
   align-items: center;
@@ -9,6 +9,7 @@ nav {
   position: fixed;
   top: 0;
   left: 0;
+  
 }
 
 nav ul li {
@@ -16,5 +17,16 @@ nav ul li {
   list-style: none;
   margin: 5px 20px;
   font-size: 16px;
-  
+  font-weight: 800;
+  cursor: pointer;
 }
+
+
+
+.logo {
+    width: 5%;
+  }
+
+ .dark_nav {
+  background-color: #ba671f;
+} 
