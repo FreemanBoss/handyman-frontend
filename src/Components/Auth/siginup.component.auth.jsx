@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { FormControl, FormLabel, Stack } from "@chakra-ui/react";
 import { validationSchema } from "../../schema/validationSchema";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
+
 
 const SignUpForm = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -30,7 +31,7 @@ const SignUpForm = () => {
         <FormLabel>User Name</FormLabel>
 
         <input
-          class="appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent shadow-sm transition duration-200 ease-in-out"
+          className="appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent shadow-sm transition duration-200 ease-in-out"
           id="text"
           type="text"
           placeholder="Enter your Username"
@@ -45,7 +46,7 @@ const SignUpForm = () => {
         <FormLabel>Email address</FormLabel>
 
         <input
-          class="appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent shadow-sm transition duration-200 ease-in-out"
+          className="appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent shadow-sm transition duration-200 ease-in-out"
           id="email"
           type="email"
           placeholder="Enter your email"
