@@ -1,0 +1,48 @@
+name: React CI/CD
+
+on:
+  pull_request:
+    branches:
+      - handyman
+  push:
+    branches:
+      - handyman
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Navigate to subfolder
+        working-directory: handyman  # Updated to the 'handyman' folder
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install dependencies with npm ci or npm install
+        run: |
+          if [ -f package-lock.json ]; then
+            npm ci
+          else
+            npm install
+          fi
+        working-directory: handyman  # Ensure the correct directory is set
+
+      - name: Lint code
+        run: npm run lint
+        working-directory: handyman
+
+      - name: Build project
+        run: npm run build
+        working-directory: handyman
+
+      - name: Upload production-ready build as artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: build
+          path: handyman/build/
