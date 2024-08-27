@@ -1,4 +1,3 @@
-import React from "react";
 import Hero from "../Components/Hero/Hero.jsx";
 import Services from "../Components/Services/Services.jsx";
 import Reviews from "../Components/Reviews/Reviews.jsx";
@@ -7,7 +6,7 @@ import Footer from "../Components/Footer/Footer.jsx";
 const HomePage = () => {
   return (
     <>
-     
+   
       <section id="hero">
         <Hero />
       </section>
