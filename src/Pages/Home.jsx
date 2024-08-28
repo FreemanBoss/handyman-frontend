@@ -3,6 +3,7 @@ import Services from "../Components/Services/Services.jsx";
 import Reviews from "../Components/Reviews/Reviews.jsx";
 import Footer from "../Components/Footer/Footer.jsx";
 
+const Name = "habeeb";
 const HomePage = () => {
   return (
     <>
