@@ -6,6 +6,7 @@ import SignUpPage from "./Pages/auth/signup.page.jsx"
 
 
 function App() {
+  const men = "6";
 
   return (
     <Router>
