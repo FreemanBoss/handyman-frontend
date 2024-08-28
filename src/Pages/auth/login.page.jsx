@@ -5,6 +5,7 @@ import loginImage from "../../assets/images/login.jpg";
 const LoginPage = () => {
   const name = 'Bola'
 
+
   return (
       
     <div className="min-h-[90%] flex justify-center items-center">
