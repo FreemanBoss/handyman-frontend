@@ -6,172 +6,189 @@
   <title>Handyman Services</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script src="https://cdn.tailwindcss.com"></script>
+  
   <!-- AOS CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 <body class="bg-gray-100">
 
     <!-- NAVBAR SECTION -->
-    <nav class="bg-[#3e2723] text-white fixed top-0 left-0 w-full z-50"> <!-- Dark brown navbar -->
-        <div class="max-w-7xl mx-auto px-4">
-          <div class="flex justify-between items-center py-4">
-            <!-- Logo -->
-            <div class="flex-shrink-0">
-              <a href="#" class="text-2xl font-bold">Logo</a>
-            </div>
-            
-            <!-- Hamburger Icon (for mobile) -->
-            <div class="md:hidden">
-              <button id="menu-button" class="text-[#bca07d] hover:text-white focus:outline-none focus:text-white"> <!-- Light golden hover -->
-                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-                </svg>
-              </button>
-            </div>
-      
-            <!-- Navigation Links (for larger screens) -->
-            <div class="hidden md:flex space-x-8">
-              <a href="#" class="text-base font-medium hover:text-[#ffcc80]">Home</a> <!-- Soft orange hover -->
-              <a href="#" class="text-base font-medium hover:text-[#ffcc80]">About</a>
-              <a href="#" class="text-base font-medium hover:text-[#ffcc80]">Services</a>
-              <a href="#" class="text-base font-medium hover:text-[#ffcc80]">Contact</a>
-            </div>
-      
-            <!-- Sign In / Sign Up (for larger screens) -->
-            <div class="hidden md:flex space-x-4">
-              <a href="#" class="text-base font-medium hover:text-[#bca07d]">Sign In</a>
-              <a href="#" class="px-4 py-2 bg-[#ffcc80] text-white rounded-md font-medium hover:bg-[#3e2723]">Sign Up</a> <!-- Dark brown button -->
-            </div>
+    <nav class="bg-[#3e2723] text-white fixed top-0 left-0 w-full z-50" data-aos="fade-down"> <!-- Dark brown navbar -->
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="flex justify-between items-center py-4">
+          <!-- Logo -->
+          <div class="flex-shrink-0" data-aos="fade-right">
+            <a href="#" class="text-2xl font-bold">Logo</a>
+          </div>
+    
+          <!-- Hamburger Icon (for mobile) -->
+          <div class="md:hidden" data-aos="fade-left">
+            <button id="menu-button" class="text-[#bca07d] hover:text-white focus:outline-none focus:text-white">
+              <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+              </svg>
+            </button>
+          </div>
+    
+          <!-- Navigation Links (for larger screens) -->
+          <div class="hidden md:flex space-x-8" data-aos="fade-up">
+            <a href="#" class="text-base font-medium hover:text-[#ffcc80]">Home</a>
+            <a href="#" class="text-base font-medium hover:text-[#ffcc80]">About</a>
+            <a href="#" class="text-base font-medium hover:text-[#ffcc80]">Services</a>
+            <a href="#" class="text-base font-medium hover:text-[#ffcc80]">Contact</a>
+          </div>
+    
+          <!-- Sign In / Sign Up (for larger screens) -->
+          <div class="hidden md:flex space-x-4" data-aos="fade-left">
+            <a href="#" class="text-base font-medium hover:text-[#bca07d] py-2">Sign In</a>
+            <a href="#" class="px-4 py-2 bg-[#ffcc80] text-white rounded-md font-medium hover:bg-[#3e2723]">Sign Up</a>
           </div>
         </div>
-      
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-[#3e2723] px-4 py-4 space-y-2">
-          <a href="#" class="block text-base font-medium hover:text-[#ffcc80]">Home</a>
-          <a href="#" class="block text-base font-medium hover:text-[#ffcc80]">About</a>
-          <a href="#" class="block text-base font-medium hover:text-[#ffcc80]">Services</a>
-          <a href="#" class="block text-base font-medium hover:text-[#ffcc80]">Contact</a>
-          <a href="#" class="block text-base font-medium hover:text-[#bca07d]">Sign In</a>
-          <a href="#" class="block px-4 py-2 bg-[#5d4037] text-white rounded-md font-medium hover:bg-[#3e2723]">Sign Up</a>
-        </div>
-      </nav>
-      
-      <script>
-        const menuButton = document.getElementById('menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-      
-        menuButton.addEventListener('click', () => {
-          mobileMenu.classList.toggle('hidden');
-        });
-      </script>
-    
-      <!-- Header Section -->
-      <header class="relative bg-[url('./RESOURCES/3739.jpg')] bg-cover bg-center h-screen">
-        <div class="absolute inset-0 bg-black opacity-60"></div> <!-- Darker overlay -->
-        <div class="container mx-auto px-6 py-80 text-center relative">
-          <h1 class="text-4xl font-bold text-[#f4ece4]">Best Handyman Services</h1> <!-- Light beige text -->
-          <p class="mt-4 text-[#f4ece4]">
-            Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-          </p>
-          <button class="mt-6 bg-[#ffb74d] text-white px-6 py-3 rounded-full hover:bg-[#f57c00]"> <!-- Bright orange button -->
-            Learn More
-          </button>
-        </div>
-      </header>
-    
-     <!-- Services Section -->
-<section class="py-20 bg-[#f4ece4]"> <!-- Light beige background -->
-    <div class="container mx-auto px-6">
-      <h2 class="text-center text-3xl font-bold text-[#3e2723]"> <!-- Dark brown text -->
-        We Are The Number One Repair Service Provider
-      </h2>
-      <div class="mt-10 flex flex-wrap justify-center gap-10">
-        <div class="w-full sm:w-1/3 p-4" data-aos="fade-up" data-aos-duration="1000">
-          <img src="./RESOURCES/12168.jpg" alt="Emergency Services" class="w-full h-auto rounded-lg"/>
-          <h3 class="mt-4 text-center text-xl font-semibold text-[#3e2723]">Emergency Services</h3>
-        </div>
-        <div class="w-full sm:w-1/3 p-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-          <img src="./RESOURCES/3739.jpg" alt="Air Conditioning" class="w-full h-auto rounded-lg"/>
-          <h3 class="mt-4 text-center text-xl font-semibold text-[#3e2723]">Air Conditioning</h3>
-        </div>
-        <div class="w-full sm:w-1/3 p-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
-          <img src="./RESOURCES/3743.jpg" alt="Plumbing Services" class="w-full h-auto rounded-lg"/>
-          <h3 class="mt-4 text-center text-xl font-semibold text-[#3e2723]">Plumbing Services</h3>
-        </div>
       </div>
-      <div class="mt-8 text-center">
-        <button class="bg-[#ffb74d] text-white px-6 py-3 rounded-full hover:bg-[#f57c00]">
-          Request a Quote
+    
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden md:hidden bg-[#3e2723] px-4 py-4 space-y-2" data-aos="fade-down">
+        <a href="#" class="block text-base font-medium hover:text-[#ffcc80]">Home</a>
+        <a href="#" class="block text-base font-medium hover:text-[#ffcc80]">About</a>
+        <a href="#" class="block text-base font-medium hover:text-[#ffcc80]">Services</a>
+        <a href="#" class="block text-base font-medium hover:text-[#ffcc80]">Contact</a>
+        <a href="#" class="block text-base font-medium hover:text-[#bca07d]">Sign In</a>
+        <a href="#" class="block px-4 py-2 bg-[#5d4037] text-white rounded-md font-medium hover:bg-[#3e2723]">Sign Up</a>
+      </div>
+    </nav>
+    
+   
+    
+  
+    <!-- Header Section -->
+    <header class="relative bg-[url('./RESOURCES/3739.jpg')] bg-cover bg-center w-800 h-screen mt-10">
+      <div class="absolute inset-0 bg-black opacity-60"></div> 
+      <div class="container mx-auto px-6 py-80 text-center relative">
+        <h1 class="header-text text-4xl font-bold text-[#f4ece4]">Best Handyman Services</h1>
+        <p class="header-text mt-4 text-[#f4ece4]">
+          Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+        </p>
+        <button class="header-button mt-6 bg-[#ffb74d] text-white px-6 py-3 rounded-full hover:bg-[#f57c00]">
+          Learn More
         </button>
       </div>
-    </div>
-  </section>
-  
+    </header>
     
-      <!-- Feature Section -->
-      <section class="bg-[#3e2723] text-[#f4ece4] py-16"> <!-- Dark brown background, light beige text -->
-        <div class="container mx-auto flex flex-col md:flex-row items-center px-6">
-          <div class="md:w-1/2">
-            <h2 class="text-4xl font-bold mb-4">
-              We Provide the Guaranteed Quality in Repairing
-            </h2>
-            <p class="text-[#d7ccc8] mb-8"> <!-- Lighter beige for secondary text -->
-              Consectetur fugiat dolorem dignissimos adipisci at minus vel. Quis nostrum exercitationem ullam corporis suscipit.
-            </p>
-            <div class="space-y-4">
-              <a href="#" class="block text-[#ffb74d]">Consectetur adipisci velit sed?</a>
-              <a href="#" class="block text-[#ffb74d]">Reprehenderit in voluptate velit?</a>
-            </div>
-          </div>
-          <div class="md:w-1/2 flex justify-center">
-            <div class="relative">
-              <img src="./RESOURCES/2149384837.jpg" alt="Repair Worker" class="rounded-lg shadow-lg">
-              <div class="absolute bottom-0 left-0 bg-[#ffb74d] text-[#3e2723] font-bold p-4 rounded-r-lg"> <!-- Bright orange label -->
-                <span>290+</span> Projects Done
-              </div>
-              <div class="absolute bottom-0 right-0 bg-[#f57c00] text-white font-bold p-4 rounded-l-lg"> <!-- Darker orange label -->
-                <span>34</span> Branches
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+  
+   <!-- Services Section -->
+<section class="py-20 bg-[#f4ece4]"> <!-- Light beige background -->
+  <div class="container mx-auto px-6">
+    <h2 class="text-center text-3xl font-bold text-[#3e2723]"> <!-- Dark brown text -->
+      We Are The Number One Repair Service Provider
+    </h2>
+    <div class="mt-10 flex flex-wrap justify-center gap-10">
+      <div class="w-full sm:w-1/3 p-4" data-aos="fade-up" data-aos-duration="1000">
+        <img src="./RESOURCES/12168.jpg" alt="Emergency Services" class="w-full h-auto rounded-lg"/>
+        <h3 class="mt-4 text-center text-xl font-semibold text-[#3e2723]">Emergency Services</h3>
+      </div>
+      <div class="w-full sm:w-1/3 p-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+        <img src="./RESOURCES/3739.jpg" alt="Air Conditioning" class="w-full h-auto rounded-lg"/>
+        <h3 class="mt-4 text-center text-xl font-semibold text-[#3e2723]">Air Conditioning</h3>
+      </div>
+      <div class="w-full sm:w-1/3 p-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+        <img src="./RESOURCES/3743.jpg" alt="Plumbing Services" class="w-full h-auto rounded-lg"/>
+        <h3 class="mt-4 text-center text-xl font-semibold text-[#3e2723]">Plumbing Services</h3>
+      </div>
+    </div>
+    <div class="mt-8 text-center">
+      <button class="bg-[#ffb74d] text-white px-6 py-3 rounded-full hover:bg-[#f57c00]">
+        Request a Quote
+      </button>
+    </div>
+  </div>
+</section>
 
-  <!-- Pricing Table Section -->
-<section class="bg-[#f4ece4] py-16"> <!-- Seabreeze background for section -->
-    <div class="container mx-auto px-6">
-      <h3 class="text-3xl font-bold text-center text-[#3e2723] mb-8">
-        Affordable Prices
-      </h3>
-      <div class="flex flex-wrap justify-center gap-8">
-        <div class="w-full sm:w-1/3 bg-[#3e2723] p-6 rounded-lg shadow-lg">
-          <h4 class="text-2xl font-bold mb-4 text-[#ffcc80]">Basic Pack</h4>
-          <p class="text-[#ffcc80] mb-6">Duis aute irure dolor in reprehenderit.</p>
-          <div class="text-3xl font-bold text-[#ffcc80] mb-6">$39<span class="text-base text-white-700">/mo</span></div>
-          <button class="bg-[#3e2723] text-white px-6 py-3 rounded-full hover:bg-[#ffcc80]">Buy Now</button> <!-- Darker shade on hover -->
+  
+    <!-- Feature Section -->
+    <!-- Feature Section -->
+<section class="bg-[#3e2723] text-[#f4ece4] py-16 overflow-hidden">
+  <div class="container mx-auto flex flex-col md:flex-row items-center px-6">
+    
+    <!-- Text Section with Scroll Animation -->
+    <div class="md:w-1/2" data-aos="fade-right">
+      <h2 class="text-4xl font-bold mb-4">
+        We Provide the Guaranteed Quality in Repairing
+      </h2>
+      <p class="text-[#d7ccc8] mb-8">
+        Consectetur fugiat dolorem dignissimos adipisci at minus vel. Quis nostrum exercitationem ullam corporis suscipit.
+      </p>
+      <div class="space-y-4">
+        <a href="#" class="block text-[#ffb74d]">Consectetur adipisci velit sed?</a>
+        <a href="#" class="block text-[#ffb74d]">Reprehenderit in voluptate velit?</a>
+      </div>
+    </div>
+    
+    <!-- Image Section with Scroll Animation -->
+    <div class="md:w-1/2 flex justify-center" data-aos="fade-left">
+      <div class="relative">
+        <img src="./RESOURCES/2149384837.jpg" alt="Repair Worker" class="w-64 rounded-sm shadow-sm">
+        <div class="absolute bottom-0 left-0 bg-[#ffb74d] text-[#3e2723] font-bold p-4 py-8 rounded-r-lg">
+          <span>290+</span> Projects 
         </div>
-        <div class="w-full sm:w-1/3 bg-[#3e2723] p-6 rounded-lg shadow-lg">
-          <h4 class="text-2xl font-bold mb-4 text-[#ffcc80]">Extended Pack</h4>
-          <p class="text-[#ffcc80] mb-6">Duis aute irure dolor in reprehenderit.</p>
-          <div class="text-3xl font-bold text-[#ffcc80] mb-6">$49<span class="text-base text-white-700">/mo</span></div>
-          <button class="bg-[#3e2723] text-white px-6 py-3 rounded-full hover:bg-[#ffcc80]">Buy Now</button> <!-- Darker shade on hover -->
-        </div>
-        <div class="w-full sm:w-1/3 bg-[#3e2723] p-6 rounded-lg shadow-lg">
-          <h4 class="text-[#ffcc80]-2x1 font-bold mb-4 text-[#ffcc80]">Premium Pack</h4>
-          <p class="text-[#ffcc80] mb-6">Affordable Prices</p>
-          <ul class="space-y-4 text-[#ffcc80]">
-            <li class="flex items-center"><svg class="w-6 h-6 text-[#ffcc80] mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"></path></svg> Duis aute irure dolor.</li>
-            <li class="flex items-center"><svg class="w-6 h-6 text-[#ffcc80] mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"></path></svg> Nemo enim ipsam.</li>
-            <li class="flex items-center"><svg class="w-6 h-6 text-[#ffcc80] mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"></path></svg> Accusantium doloremque.</li>
-          </ul>
+        <div class="absolute bottom-28 right-0 bg-[#f57c00] text-white font-bold px-6 py-8 rounded-l-lg">
+          <span>34</span> Branches
         </div>
       </div>
     </div>
-  </section>
-  
+    
+  </div>
+</section>
 
-  <!-- TESTIMONIAL SECTION -->
-  <section class="bg-[#3e2723] py-16">   <!-- Dark brown -->
+<!-- Include AOS Library -->
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 100, // Animation duration
+    easing: 'ease-in-out', // Animation easing
+    twice: true // Animation happens only once
+  });
+</script>
+
+
+<!-- Pricing Table Section -->
+<section class="bg-[#f4ece4] py-16">
+  <div class="container mx-auto px-6">
+    <h3 class="text-3xl font-bold text-center text-[#3e2723] mb-8">
+      Affordable Prices
+    </h3>
+    <div class="flex flex-wrap justify-center gap-8">
+      <div class="w-full sm:w-1/3 bg-[#3e2723] p-6 rounded-lg shadow-lg pricing-card" data-animation="fade-in">
+        <h4 class="text-2xl font-bold mb-4 text-[#ffcc80]">Basic Pack</h4>
+        <p class="text-[#ffcc80] mb-6">Duis aute irure dolor in reprehenderit.</p>
+        <div class="text-3xl font-bold text-[#ffcc80] mb-6">$39<span class="text-base text-white-700">/mo</span></div>
+        <button class="bg-[#3e2723] text-white px-6 py-3 rounded-full hover:bg-[#ffcc80]">Buy Now</button>
+      </div>
+      <div class="w-full sm:w-1/3 bg-[#3e2723] p-6 rounded-lg shadow-lg pricing-card" data-animation="fade-in">
+        <h4 class="text-2xl font-bold mb-4 text-[#ffcc80]">Extended Pack</h4>
+        <p class="text-[#ffcc80] mb-6">Duis aute irure dolor in reprehenderit.</p>
+        <div class="text-3xl font-bold text-[#ffcc80] mb-6">$49<span class="text-base text-white-700">/mo</span></div>
+        <button class="bg-[#3e2723] text-white px-6 py-3 rounded-full hover:bg-[#ffcc80]">Buy Now</button>
+      </div>
+      <div class="w-full sm:w-1/3 bg-[#3e2723] p-6 rounded-lg shadow-lg pricing-card" data-animation="fade-in">
+        <h4 class="text-2xl font-bold mb-4 text-[#ffcc80]">Premium Pack</h4>
+        <p class="text-[#ffcc80] mb-6">Affordable Prices</p>
+        <ul class="space-y-4 text-[#ffcc80]">
+          <li class="flex items-center"><svg class="w-6 h-6 text-[#ffcc80] mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"></path></svg> Duis aute irure dolor.</li>
+          <li class="flex items-center"><svg class="w-6 h-6 text-[#ffcc80] mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"></path></svg> Nemo enim ipsam.</li>
+          <li class="flex items-center"><svg class="w-6 h-6 text-[#ffcc80] mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"></path></svg> Accusantium doloremque.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- TESTIMONIAL SECTION -->
+<section class="bg-[#3e2723] py-16"> <!-- Dark brown -->
   <div class="bg-[#3e2723] text-white py-16">
     <div class="max-w-4xl mx-auto px-4 text-center">
       <h2 class="text-sm font-semibold tracking-wide uppercase">Testimonial</h2>
@@ -180,187 +197,325 @@
         Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum.
       </p>
       <div class="mt-6 flex flex-col items-center">
-        <img class="w-12 h-12 rounded-full" src="./RESOURCES/4137.jpg" alt="Customer" />
+        <img class="w-24 h-24 rounded-full" src="./RESOURCES/4137.jpg" alt="Customer" />
         <p class="mt-4 text-lg font-medium">Rene Harmon</p>
         <p class="text-sm">Customer</p>
       </div>
     </div>
-   <!-- Image Scrolling Section -->
-<div class="overflow-hidden relative">
-    <div class="flex animate-scroll">
-      <div class="flex-none w-50 md:w-2/12">
-        <img class="w-50 h-48 object-contain" src="./RESOURCES/3532.jpg" alt="Image 1" />
-      </div>
-      <div class="flex-none w-50 md:w-2/12">
-        <img class="w-50 h-48 object-contain" src="./RESOURCES/4137.jpg" alt="Image 2" />
-      </div>
-      <div class="flex-none w-50 md:w-2/12">
-        <img class="w-50 h-48 object-contain" src="./RESOURCES/3532.jpg" alt="Image 3" />
-      </div>
-      <div class="flex-none w-50 md:w-2/12">
-        <img class="w-50 h-48 object-contain" src="./RESOURCES/3532.jpg" alt="Image 4" />
-      </div>
-      <!-- Duplicate images to ensure continuous scrolling -->
-      <div class="flex-none w-full md:w-1/4">
-        <img class="w-50 h-48 object-contain" src="./RESOURCES/3532.jpg" alt="Image 1" />
-      </div>
-      <div class="flex-none w-full md:w-1/4">
-        <img class="w-50 h-48 object-contain" src="./RESOURCES/4137.jpg" alt="Image 2" />
-      </div>
-      <div class="flex-none w-full md:w-1/4">
-        <img class="w-50 h-48 object-contain" src="./RESOURCES/3532.jpg" alt="Image 3" />
-      </div>
-      <div class="flex-none w-full md:w-1/4">
-        <img class="w-50 h-48 object-contain" src="./RESOURCES/3532.jpg" alt="Image 4" />
+
+    <!-- Image Scrolling Section -->
+    <div class="mt-12 overflow-hidden relative">
+      <div class="flex space-x-4 animate-scroll">
+        <div class="flex-none w-full md:w-1/5">
+          <img class="w-full h-48 object-cover rounded-lg shadow-lg" src="./RESOURCES/3532.jpg" alt="Image 1" />
+        </div>
+        <div class="flex-none w-full md:w-1/5">
+          <img class="w-full h-48 object-cover rounded-lg shadow-lg" src="./RESOURCES/4137.jpg" alt="Image 2" />
+        </div>
+        <div class="flex-none w-full md:w-1/5">
+          <img class="w-full h-48 object-cover rounded-lg shadow-lg" src="./RESOURCES/3532.jpg" alt="Image 3" />
+        </div>
+        <div class="flex-none w-full md:w-1/5">
+          <img class="w-full h-48 object-cover rounded-lg shadow-lg" src="./RESOURCES/3532.jpg" alt="Image 4" />
+        </div>
       </div>
     </div>
-  </div>
-
-
-  <style>
-    /* Define the scrolling animation */
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
-
-/* Container to hold the scrolling images */
-.overflow-hidden {
-  overflow: hidden;
-}
-
-/* Animate the images */
-.animate-scroll {
-  display: flex;
-  width: 200%; /* Adjust based on the number of images */
-  animation: scroll 20s linear infinite;
-}
-
-/* Each image container */
-.flex-none {
-  flex: 0 0 auto;
-}
-
-  </style>
-  
   </div>
 </section>
 
-  <!-- TEAM SECTION  -->
-  <div class="bg-[#f4ece4] py-16">
-    <!-- Expert Team Section -->
-    <div class="max-w-7xl mx-auto px-4">
-      <div class="flex justify-between items-center">
-        <div>
-          <h2 class="text-sm font-semibold uppercase tracking-wide">Meet the Team</h2>
-          <h3 class="mt-2 text-3xl font-bold">Expert Team</h3>
-          <p class="mt-4 text-base text-gray-600 max-w-lg">
-            Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
-            consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro
-            quisquam est qui dolorem ipsum.
-          </p>
-        </div>
-        <a href="#" class="text-blue-600 font-medium hover:text-blue-800">View More &rarr;</a>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+<script>
+  gsap.registerPlugin(ScrollTrigger);
+
+  // Animate the text on scroll
+  gsap.from("section h2, section h3, section p", {
+    scrollTrigger: {
+      trigger: "section",
+      start: "top 80%",
+      end: "bottom 60%",
+      toggleActions: "play none none none"
+    },
+    opacity: 0,
+    y: 50,
+    duration: 1,
+    stagger: 0.3, // Add a slight delay between animations
+    ease: "power2.out"
+  });
+
+  gsap.from(".flex-none", {
+    scrollTrigger: {
+      trigger: ".flex-none",
+      start: "top 90%",
+      end: "bottom 70%",
+      toggleActions: "play none none none"
+    },
+    opacity: 0,
+    scale: 0.8,
+    duration: 1,
+    stagger: 0.2, // Add a slight delay between image animations
+    ease: "power2.out"
+  });
+</script>
+
+
+<!-- TEAM SECTION  -->
+<div class="bg-[#f4ece4] py-16">
+  <!-- Expert Team Section -->
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="flex justify-between items-center">
+      <div>
+        <h2 class="text-sm font-semibold uppercase tracking-wide">Meet the Team</h2>
+        <h3 class="mt-2 text-3xl font-bold">Expert Team</h3>
+        <p class="mt-4 text-base text-gray-600 max-w-lg">
+          Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
+          consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro
+          quisquam est qui dolorem ipsum.
+        </p>
       </div>
-      <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="flex flex-col items-center">
-          <img class="w-40 h-40 rounded-full object-cover" src="./RESOURCES/3739.jpg" alt="Team Member 1" />
-          <p class="mt-4 text-lg font-bold">Jason Kurlan</p>
-          <p class="text-sm text-gray-500">Handyman</p>
-        </div>
-        <div class="flex flex-col items-center">
-          <img class="w-40 h-40 rounded-full object-cover" src="./RESOURCES/33652.jpg" alt="Team Member 2" />
-          <p class="mt-4 text-lg font-bold">Kevin Martin</p>
-          <p class="text-sm text-gray-500">Handyman</p>
-        </div>
-        <div class="flex flex-col items-center">
-          <img class="w-40 h-40 rounded-full object-cover" src="./RESOURCES/4137.jpg" alt="Team Member 3" />
-          <p class="mt-4 text-lg font-bold">Noper Mick</p>
-          <p class="text-sm text-gray-500">Handyman</p>
-        </div>
-      </div>
+      <a href="#" class="text-blue-600 font-medium hover:text-blue-800">View More &rarr;</a>
     </div>
-    
-    <!-- Contact Section -->
-    <div class="mt-16 bg-[#3e2723]  text-white py-16">
-      <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center px-4">
-        <div>
-          <h2 class="text-sm font-semibold uppercase tracking-wide">Get In Touch</h2>
-          <h3 class="mt-2 text-3xl font-bold">Our Team Is Ready and Always Available</h3>
-          <button class="mt-6 px-6 py-3 bg-yellow-500 text-white font-semibold rounded-md hover:bg-yellow-600">Contact Us</button>
-        </div>
-        <img class="w-full h-64 object-cover" src="./RESOURCES/3743.jpg" alt="Technician at Work" />
+    <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="flex flex-col items-center">
+        <img class="w-40 h-40 rounded-full object-cover" src="./RESOURCES/3739.jpg" alt="Team Member 1" />
+        <p class="mt-4 text-lg font-bold">Jason Kurlan</p>
+        <p class="text-sm text-gray-500">Handyman</p>
+      </div>
+      <div class="flex flex-col items-center">
+        <img class="w-40 h-40 rounded-full object-cover" src="./RESOURCES/33652.jpg" alt="Team Member 2" />
+        <p class="mt-4 text-lg font-bold">Kevin Martin</p>
+        <p class="text-sm text-gray-500">Handyman</p>
+      </div>
+      <div class="flex flex-col items-center">
+        <img class="w-40 h-40 rounded-full object-cover" src="./RESOURCES/4137.jpg" alt="Team Member 3" />
+        <p class="mt-4 text-lg font-bold">Noper Mick</p>
+        <p class="text-sm text-gray-500">Handyman</p>
       </div>
     </div>
   </div>
+  
+  <!-- Contact Section -->
+  <div class="mt-16 bg-[#3e2723]  text-white py-16">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center px-4">
+      <div>
+        <h2 class="text-sm font-semibold uppercase tracking-wide">Get In Touch</h2>
+        <h3 class="mt-2 text-3xl font-bold">Our Team Is Ready and Always Available</h3>
+        <button class="mt-6 px-6 py-3 bg-yellow-500 text-white font-semibold rounded-md hover:bg-yellow-600">Contact Us</button>
+      </div>
+      <img class="w-full h-64 object-cover" src="./RESOURCES/3743.jpg" alt="Technician at Work" />
+    </div>
+  </div>
+</div>
 
-  <!-- footer  -->
-  <footer class="bg-[#3e2723]  text-gray-600 py-8">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-        <!-- About Us -->
-        <div>
-          <h3 class="text-[#ffcc80] font-bold mb-4">About Us</h3>
-          <p class="text-[#ffcc80] mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus a facere mollitia soluta tenetur esse! Earum quas nostrum hic similique!</p>
-          <div class="flex space-x-3">
-            <a href="#" class="text-[#ffcc80] hover:text-white-700"><i class="fa-brands fa-square-whatsapp"></i></a>
-            <a href="#" class="text-[#ffcc80] hover:text-white-700"><i class="fa-brands fa-square-x-twitter"></i></a>
-            <a href="#" class="text-[#ffcc80] hover:text-white-700"><i class="fa-brands fa-square-instagram"></i></a>
-            <a href="#" class="text-[#ffcc80] hover:text-white-700"><i class="fa-brands fa-linkedin"></i></a>
-          </div>
-        </div>
-        
-        <!-- Support -->
-        <div>
-          <h3 class="text-[#ffcc80] font-bold mb-4">Support</h3>
-          <ul class="space-y-2">
-            <li><a href="#" class="text-[#ffcc80] hover:underline">FAQ</a></li>
-            <li><a href="#" class="text-[#ffcc80] hover:underline">Privacy Policy</a></li>
-            <li><a href="#" class="text-[#ffcc80] hover:underline">Help</a></li>
-            <li><a href="#" class="text-[#ffcc80] hover:underline">Contact</a></li>
-          </ul>
-        </div>
-        
-        <!-- Shop -->
-        <div>
-          <h3 class="text-[#ffcc80] font-bold mb-4">Shop</h3>
-          <ul class="space-y-2">
-            <li><a href="#" class="text-[#ffcc80] hover:underline">Men</a></li>
-            <li><a href="#" class="text-[#ffcc80] hover:underline">Women</a></li>
-            <li><a href="#" class="text-[#ffcc80] hover:underline">Children</a></li>
-            <li><a href="#" class="text-[#ffcc80] hover:underline">Shoes</a></li>
-          </ul>
-        </div>
-        
-        <!-- Contact Us -->
-        <div>
-          <h3 class="text-[#ffcc80] font-bold mb-4">Contact Us</h3>
-          <ul class="space-y-2">
-            <li class="flex text-[#ffcc80] items-center"><i class="fas fa-phone mr-2"></i> +1234 567 8900</li>
-            <li class="flex text-[#ffcc80] items-center"><i class="fas fa-envelope mr-2"></i> knowmore@mail.com</li>
-            <a href="#" class="text-[#ffcc80] hover:text-gray-900 text-3xl"><i class="fa-brands fa-square-whatsapp"></i></a>
-            <a href="#" class="text-[#ffcc80] hover:text-gray-900 text-3xl"><i class="fa-brands fa-square-x-twitter"></i></a>
-            <a href="#" class="text-[#ffcc80] hover:text-gray-900 text-3xl"><i class="fa-brands fa-square-instagram"></i></a>
-            <a href="#" class="text-[#ffcc80] hover:text-gray-900 text-3xl"><i class="fa-brands fa-linkedin"></i></a>
+<!-- news letter -->
+<section class="bg-[#4a2e29] text-white py-16">
+  <div class="max-w-3xl mx-auto text-center">
+    <h2 class="text-2xl font-bold mb-4">Subscribe to Our Newsletter</h2>
+    <p class="text-lg mb-8">Stay updated with our latest news and offers. Enter your email below to subscribe!</p>
+    
+    <form class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+      <input 
+        type="email" 
+        placeholder="Enter your email" 
+        class="w-full sm:w-auto px-4 py-2 rounded-md border border-gray-300 text-gray-700 focus:outline-none focus:ring-2 focus:ring-yellow-500"
+        required
+      />
+      <button 
+        type="submit" 
+        class="w-full sm:w-auto px-6 py-2 bg-yellow-500 text-white font-semibold rounded-md hover:bg-yellow-600 transition-colors duration-300"
+      >
+        Subscribe
+      </button>
+    </form>
+  </div>
+</section>
 
-          </ul>
+
+<!-- footer  -->
+<footer class="bg-[#3e2723]  text-gray-600 py-8">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <!-- About Us -->
+      <div>
+        <h3 class="text-[#ffcc80] font-bold mb-4">About Us</h3>
+        <p class="text-[#ffcc80] mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus a facere mollitia soluta tenetur esse! Earum quas nostrum hic similique!</p>
+        <div class="flex space-x-3">
+          <a href="#" class="text-[#ffcc80] hover:text-white-700"><i class="fa-brands fa-square-whatsapp"></i></a>
+          <a href="#" class="text-[#ffcc80] hover:text-white-700"><i class="fa-brands fa-square-x-twitter"></i></a>
+          <a href="#" class="text-[#ffcc80] hover:text-white-700"><i class="fa-brands fa-square-instagram"></i></a>
+          <a href="#" class="text-[#ffcc80] hover:text-white-700"><i class="fa-brands fa-linkedin"></i></a>
         </div>
       </div>
       
-      <div class="mt-8 border-t border-gray-200 pt-4 text-center">
-        <p class="text-sm text-[#ffcc80]">&copy; 2024 Handyman. All Rights Reserved.</p>
+      <!-- Support -->
+      <div>
+        <h3 class="text-[#ffcc80] font-bold mb-4">Support</h3>
+        <ul class="space-y-2">
+          <li><a href="#" class="text-[#ffcc80] hover:underline">FAQ</a></li>
+          <li><a href="#" class="text-[#ffcc80] hover:underline">Privacy Policy</a></li>
+          <li><a href="#" class="text-[#ffcc80] hover:underline">Help</a></li>
+          <li><a href="#" class="text-[#ffcc80] hover:underline">Contact</a></li>
+        </ul>
+      </div>
+      
+      <!-- Shop -->
+      <div>
+        <h3 class="text-[#ffcc80] font-bold mb-4">Shop</h3>
+        <ul class="space-y-2">
+          <li><a href="#" class="text-[#ffcc80] hover:underline">Men</a></li>
+          <li><a href="#" class="text-[#ffcc80] hover:underline">Women</a></li>
+          <li><a href="#" class="text-[#ffcc80] hover:underline">Children</a></li>
+          <li><a href="#" class="text-[#ffcc80] hover:underline">Shoes</a></li>
+        </ul>
+      </div>
+      
+      <!-- Contact Us -->
+      <div>
+        <h3 class="text-[#ffcc80] font-bold mb-4">Contact Us</h3>
+        <ul class="space-y-2">
+          <li class="flex text-[#ffcc80] items-center"><i class="fas fa-phone mr-2"></i> +1234 567 8900</li>
+          <li class="flex text-[#ffcc80] items-center"><i class="fas fa-envelope mr-2"></i> knowmore@mail.com</li>
+          <a href="#" class="text-[#ffcc80] hover:text-gray-900 text-3xl"><i class="fa-brands fa-square-whatsapp"></i></a>
+          <a href="#" class="text-[#ffcc80] hover:text-gray-900 text-3xl"><i class="fa-brands fa-square-x-twitter"></i></a>
+          <a href="#" class="text-[#ffcc80] hover:text-gray-900 text-3xl"><i class="fa-brands fa-square-instagram"></i></a>
+          <a href="#" class="text-[#ffcc80] hover:text-gray-900 text-3xl"><i class="fa-brands fa-linkedin"></i></a>
+
+        </ul>
       </div>
     </div>
-  </footer>
+    
+    <div class="mt-8 border-t border-gray-200 pt-4 text-center">
+      <p class="text-sm text-[#ffcc80]">&copy; 2024 Handyman. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
 
-  <!-- AOS JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-  <script>
-    AOS.init(); // Initialize AOS
-  </script>
+<!-- for the navbar -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script> -->
+<script>
+  AOS.init({
+    duration: 1000, // duration of animation
+    offset: 200, // offset (in pixels) from the original trigger point
+    easing: 'ease-in-out', // easing option
+    delay: 100, // delay before the animation starts
+    once: true // whether animation should happen only once
+  });
+</script>
+
+<!-- for header section -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+<script>
+  gsap.registerPlugin(ScrollTrigger);
+
+  // Animate the header text and button
+  gsap.from(".header-text", {
+    y: 50,
+    opacity: 0,
+    duration: 1,
+    scrollTrigger: {
+      trigger: ".header-text",
+      start: "top 70%", // Animation starts when the element is 80% from the top of the viewport
+      toggleActions: "play none none reverse",
+    }
+  });
+
+  gsap.from(".header-button", {
+    y: 50,
+    opacity: 0,
+    duration: 1.5,
+    scrollTrigger: {
+      trigger: ".header-button",
+      start: "top 80%",
+      toggleActions: "play none none reverse",
+    }
+  });
+</script>
+<!--  -->
+
+<!-- pricing table section -->
+
+<script>
+  gsap.registerPlugin(ScrollTrigger);
+
+  // Animate each pricing card on scroll
+  document.querySelectorAll('.pricing-card').forEach((card) => {
+    gsap.from(card, {
+      scrollTrigger: {
+        trigger: 'card',
+        start: 'top 80%',
+        end: 'bottom 60%',
+        toggleActions: 'play none none reverse',
+      },
+      opacity: 0,
+      y: 50,
+      duration: 1.2,
+      ease: 'power2.out'
+    });
+  });
+
+  // Animate the section title
+  gsap.from('h3', {
+    scrollTrigger: {
+      trigger: 'h3',
+      start: 'top 90%',
+      end: 'bottom 70%',
+      toggleActions: 'play none none none',
+    },
+    opacity: 0,
+    y: -30,
+    duration: 1.5,
+    ease: 'power2.out'
+  });
+</script>
+<!-- animate footer -->
+<script>
+gsap.registerPlugin(ScrollTrigger);
+
+// Animate footer sections
+const footerSections = document.querySelectorAll('footer .grid > div');
+
+footerSections.forEach((section) => {
+  gsap.from(section, {
+    scrollTrigger: {
+      trigger: section,
+      start: 'top 80%',
+      end: 'bottom 60%',
+      toggleActions: 'play none none none',
+    },
+    opacity: 0,
+    y: 30,
+    duration: 1.2,
+    ease: 'power2.out',
+  });
+});
+
+// Animate the footer bottom text
+gsap.from('footer .border-t', {
+  scrollTrigger: {
+    trigger: 'footer .border-t',
+    start: 'top 90%',
+    end: 'bottom 70%',
+    toggleActions: 'play none none none',
+  },
+  opacity: 0,
+  y: 20,
+  duration: 1.2,
+  ease: 'power2.out',
+});
+</script>
+
+
+
+<!-- AOS JS -->
+<script>
+  AOS.init(); // Initialize AOS
+</script>
+
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
 </body>
 </html>
