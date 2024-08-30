@@ -1,6 +1,5 @@
 import Hero from "../Components/Hero/Hero.jsx";
 import Services from "../Components/Services/Services.jsx";
-import Reviews from "../Components/Reviews/Reviews.jsx";
 import Footer from "../Components/Footer/Footer.jsx";
 import Feature from "../Components/Feature/feature.jsx";
 import PricingTable from "../Components/PricingTable/PricingTable.jsx";
@@ -40,9 +39,9 @@ const HomePage = () => {
         <Contact />
       </section>
 
-      <section id="footer">
+      {/* <section id="footer">
         <Footer />
-      </section>
+      </section> */}
 
       
     </>

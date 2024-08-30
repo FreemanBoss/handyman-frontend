@@ -14,24 +14,27 @@ const features = ()=> {
           We Provide the Guaranteed Quality in Repairing
         </h2>
         <p className="text-[#d7ccc8] mb-8">
-          {" "}
+          
           {/* Lighter beige for secondary text */}
-          Consectetur fugiat dolorem dignissimos adipisci at minus vel. Quis
-          nostrum exercitationem ullam corporis suscipit.
+          At HandyMan, we take pride in delivering exceptional
+          repair services. Our team of skilled professionals ensures 
+          that every job is done to perfection, 
+          no matter how big or small. Whether it's fixing a leak 
+          or revamping a room, you can trust us to get it right the first time.
         </p>
         <div className="space-y-4">
           <a href="#" className="block text-[#ffb74d]">
-            Consectetur adipisci velit sed?
+            Have a specific repair need?
           </a>
           <a href="#" className="block text-[#ffb74d]">
-            Reprehenderit in voluptate velit?
+          Our experts are ready to help!
           </a>
         </div>
       </div>
       <div className="md:w-1/2 flex justify-center">
         <div className="relative">
           <img
-            src="./RESOURCES/2149384837.jpg"
+            src="../src/assets/images/plumbing-professional.jpg"
             alt="Repair Worker"
             className="rounded-lg shadow-lg"
           />

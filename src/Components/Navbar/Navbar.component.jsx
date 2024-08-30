@@ -9,16 +9,17 @@ const Navbar = () => {
     <>
    
   {/* NAVBAR SECTION */}
-  <nav className="bg-[#3e2723] text-white fixed top-0 left-0 w-full z-50">
+  <nav className="bg-[#3e2723] text-white fixed top-0 left-0 w-full  z-50">
     
     {/* Dark brown navbar */}
     <div className="max-w-7xl mx-auto px-4">
       <div className="flex justify-between items-center py-4">
         {/* Logo */}
-        <div className="flex-shrink-0 bg-[url('../src/assets/images/handyman-logo.png')] bg-cover bg-center px-8 py-8">
-           {/* <a href="#" className="text-2xl font-bold">
-            Logo
-          </a>  */}
+        <div className="flex-shrink-0">
+           <a href="#" className="text-4xl text-[#ffcc80] font-bold">
+            HANDYMAN
+          </a> 
+          <div className=''></div>
         </div>
         {/* Hamburger Icon (for mobile) */}
         <div className="md:hidden">
@@ -46,9 +47,9 @@ const Navbar = () => {
         </div>
         {/* Navigation Links (for larger screens) */}
         <div className="hidden md:flex space-x-8">
-          <a href="#" className="text-base font-medium hover:text-[#ffcc80]">
+          <Link to='/' className="text-base font-medium hover:text-[#ffcc80]">
             Home
-          </a>
+          </Link>
           {/* Soft orange hover */}
           <a href="#" className="text-base font-medium hover:text-[#ffcc80]">
             About
@@ -62,15 +63,16 @@ const Navbar = () => {
         </div>
         {/* Sign In / Sign Up (for larger screens) */}
         <div className="hidden md:flex space-x-4 ">
-          <a href="#" className="text-base font-medium hover:text-[#bca07d]">
+          <Link to='/auth/signin'
+            className="text-base font-medium hover:text-[#ffcc80] mt-2">
             Sign In
-          </a>
-          <a
-            href="#"
-            className="px-4 py-2 bg-[#ffcc80] text-white rounded-md font-medium hover:bg-[#3e2723]"
-          >
+          </Link>
+
+          <Link to='/auth/signup'
+            className="px-4 py-2 bg-[#ffcc80] text-white rounded-md font-medium hover:bg-[#3e2723]">
             Sign Up
-          </a>
+          </Link>
+
           {/* Dark brown button */}
         </div>
       </div>

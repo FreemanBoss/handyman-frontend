@@ -31,7 +31,7 @@ const SignUpForm = () => {
         <FormLabel>User Name</FormLabel>
 
         <input
-          className="appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent shadow-sm transition duration-200 ease-in-out"
+          className="appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#bca07d] focus:border-transparent shadow-sm transition duration-200 ease-in-out"
           id="text"
           type="text"
           placeholder="Enter your Username"
@@ -46,7 +46,7 @@ const SignUpForm = () => {
         <FormLabel>Email address</FormLabel>
 
         <input
-          className="appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent shadow-sm transition duration-200 ease-in-out"
+          className="appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#bca07d] focus:border-transparent shadow-sm transition duration-200 ease-in-out"
           id="email"
           type="email"
           placeholder="Enter your email"
@@ -66,7 +66,7 @@ const SignUpForm = () => {
         </label>
         <div className="relative">
           <input
-            className="appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent shadow-sm transition duration-200 ease-in-out pr-10"
+            className="appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#bca07d] focus:border-transparent shadow-sm transition duration-200 ease-in-out pr-10"
             id="password"
             type={showPassword ? "text" : "password"}
             placeholder="Enter your password"
@@ -130,7 +130,7 @@ const SignUpForm = () => {
         </label>
         <div className="relative">
           <input
-            className="appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent shadow-sm transition duration-200 ease-in-out pr-10"
+            className="appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#bca07d] focus:border-transparent shadow-sm transition duration-200 ease-in-out pr-10"
             id="confirm password"
             type={showConfirmPassword ? "text" : "password"}
             placeholder="Confirm your password"
@@ -205,7 +205,7 @@ const SignUpForm = () => {
         Already have an account?
         <Link
           to="/auth/signin"
-          className="font-medium text-teal-600 hover:underline dark:text-teal-500"
+          className="font-medium text-teal-600 hover:underline dark:text-[#bca07d]"
         >
           Sign in
         </Link>

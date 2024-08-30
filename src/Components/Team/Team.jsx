@@ -14,10 +14,10 @@ const Team = () => {
           </h2>
           <h3 className="mt-2 text-3xl font-bold">Expert Team</h3>
           <p className="mt-4 text-base text-gray-600 max-w-lg">
-            Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
-            fugit, sed quia consequuntur magni dolores eos qui ratione
-            voluptatem sequi nesciunt. Neque porro quisquam est qui dolorem
-            ipsum.
+          Our skilled professionals bring years of experience 
+          and dedication to every project, ensuring the highest 
+          quality work. We take pride in delivering exceptional 
+          results that exceed expectations.
           </p>
         </div>
         <a href="#" className="text-blue-600 font-medium hover:text-blue-800">
@@ -28,7 +28,7 @@ const Team = () => {
         <div className="flex flex-col items-center">
           <img
             className="w-40 h-40 rounded-full object-cover"
-            src="./RESOURCES/3739.jpg"
+            src="../src/assets/images/team1.jpg"
             alt="Team Member 1"
           />
           <p className="mt-4 text-lg font-bold">Jason Kurlan</p>
@@ -37,7 +37,7 @@ const Team = () => {
         <div className="flex flex-col items-center">
           <img
             className="w-40 h-40 rounded-full object-cover"
-            src="./RESOURCES/33652.jpg"
+            src="../src/assets/images/team.jpg"
             alt="Team Member 2"
           />
           <p className="mt-4 text-lg font-bold">Kevin Martin</p>
@@ -46,7 +46,7 @@ const Team = () => {
         <div className="flex flex-col items-center">
           <img
             className="w-40 h-40 rounded-full object-cover"
-            src="./RESOURCES/4137.jpg"
+            src="../src/assets/images/team3.jpg"
             alt="Team Member 3"
           />
           <p className="mt-4 text-lg font-bold">Noper Mick</p>

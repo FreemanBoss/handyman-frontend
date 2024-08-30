@@ -15,7 +15,9 @@ const PricingTable = () => {
         <div className="w-full sm:w-1/3 bg-[#3e2723] p-6 rounded-lg shadow-lg">
           <h4 className="text-2xl font-bold mb-4 text-[#ffcc80]">Basic Pack</h4>
           <p className="text-[#ffcc80] mb-6">
-            Duis aute irure dolor in reprehenderit.
+          Our Basic Pack is designed for minor repairs and maintenance 
+          tasks, providing quick and efficient solutions to keep 
+          your home running smoothly.
           </p>
           <div className="text-3xl font-bold text-[#ffcc80] mb-6">
             $39<span className="text-base text-white-700">/mo</span>
@@ -30,7 +32,10 @@ const PricingTable = () => {
             Extended Pack
           </h4>
           <p className="text-[#ffcc80] mb-6">
-            Duis aute irure dolor in reprehenderit.
+          Whether you're tackling a larger project or need multiple 
+          repairs done at once, the Extended Pack provides the 
+          expertise and quality you can rely on to keep your 
+          home in peak condition.
           </p>
           <div className="text-3xl font-bold text-[#ffcc80] mb-6">
             $49<span className="text-base text-white-700">/mo</span>
@@ -53,8 +58,9 @@ const PricingTable = () => {
                 viewBox="0 0 24 24"
               >
                 <path d="M5 13l4 4L19 7" />
-              </svg>{" "}
-              Duis aute irure dolor.
+              </svg>
+              Top-tier services for your most demanding home projects, 
+              all at affordable prices.
             </li>
             <li className="flex items-center">
               <svg
@@ -63,8 +69,8 @@ const PricingTable = () => {
                 viewBox="0 0 24 24"
               >
                 <path d="M5 13l4 4L19 7" />
-              </svg>{" "}
-              Nemo enim ipsam.
+              </svg>
+              Get the best quality without breaking the bank.
             </li>
             <li className="flex items-center">
               <svg
@@ -73,8 +79,9 @@ const PricingTable = () => {
                 viewBox="0 0 24 24"
               >
                 <path d="M5 13l4 4L19 7" />
-              </svg>{" "}
-              Accusantium doloremque.
+              </svg>
+              From complex repairs to luxurious upgrades, 
+              our Premium Pack has you covered.
             </li>
           </ul>
         </div>

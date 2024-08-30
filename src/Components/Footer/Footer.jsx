@@ -11,9 +11,10 @@ const Footer = () => {
         <div>
           <h3 className="text-[#ffcc80] font-bold mb-4">About Us</h3>
           <p className="text-[#ffcc80] mb-4">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Necessitatibus a facere mollitia soluta tenetur esse! Earum quas
-            nostrum hic similique!
+          Dedicated to providing top-quality home repair 
+          and maintenance services, we combine expertise 
+          with a commitment to customer satisfaction. 
+          
           </p>
           <div className="flex space-x-3">
             <a href="#" className="text-[#ffcc80] hover:text-white-700">

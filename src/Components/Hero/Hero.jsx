@@ -11,9 +11,9 @@ const Hero = () => {
       </h1>
       {/* Light beige text */}
       <p className="mt-4 text-[#f4ece4]">
-        Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae
-        vitae dicta sunt explicabo.
-      </p>
+      Reliable professionals for all your home repair and maintenance needs.
+       </p>
+      
       <button className="mt-6 bg-[#ffb74d] text-white px-6 py-3 rounded-full hover:bg-[#f57c00]">
         
         {/* Bright orange button */}

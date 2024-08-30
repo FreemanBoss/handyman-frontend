@@ -20,12 +20,12 @@ const Services = () => {
           data-aos-duration={1000}
         >
           <img
-            src="./RESOURCES/12168.jpg"
+            src="../src/assets/images/clean.jpg"
             alt="Emergency Services"
             className="w-full h-auto rounded-lg"
           />
           <h3 className="mt-4 text-center text-xl font-semibold text-[#3e2723]">
-            Emergency Services
+            Cleaning Services
           </h3>
         </div>
         <div
@@ -35,7 +35,7 @@ const Services = () => {
           data-aos-delay={200}
         >
           <img
-            src="./RESOURCES/3739.jpg"
+            src="../src/assets/images/AirConditioning.jpg"
             alt="Air Conditioning"
             className="w-full h-auto rounded-lg"
           />
@@ -50,7 +50,7 @@ const Services = () => {
           data-aos-delay={400}
         >
           <img
-            src="./RESOURCES/3743.jpg"
+            src="../src/assets/images/plumbing.jpg"
             alt="Plumbing Services"
             className="w-full h-auto rounded-lg"
           />
