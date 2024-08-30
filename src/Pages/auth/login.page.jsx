@@ -3,7 +3,7 @@ import loginImage from "../../assets/images/login.jpg";
 
 
 const LoginPage = () => {
-  const name = 'Bola'
+  
 
 
   return (
