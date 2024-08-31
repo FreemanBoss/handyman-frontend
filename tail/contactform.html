@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="antialiased bg-gray-100">
+    <!-- contact section -->
+    <div class="flex w-full min-h-screen justify-center items-center">
+        <div class="flex flex-col md:flex-row md:space-x-6 space-y-6 md:space-y-0 bg-[#3e2723] w-full max-w-6xl p-8 sm:p-12 rounded-xl shadow-lg text-white overflow-hidden">
+            <div class="flex flex-col space-y-8 justify-between md:w-1/2">
+                <div>
+                    <h1 class="font-bold text-4xl tracking-wide">
+                        Get in Touch with Us
+                    </h1>
+                    <p class="pt-2 text-[#ffcc80] text-sm">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                        Officiis totam, sit amet consectetur adipisicing elit. 
+                        Officiis totam, sit amet consectetur adipisicing elit. 
+                        Officiis totam
+                    </p>
+                </div>
+                <div class="flex flex-col space-y-6">
+                    <div class="inline-flex space-x-2 items-center">
+                        <ion-icon name="call" class="text-[#ffcc80] text-xl"></ion-icon>
+                        <span>+(234) 567 8977</span>
+                    </div>
+                    <div class="inline-flex space-x-2 items-center">
+                        <ion-icon name="mail" class="text-[#ffcc80] text-xl"></ion-icon>
+                        <span>example@gmail.com</span>
+                    </div>
+                    <div class="inline-flex space-x-2 items-center">
+                        <ion-icon name="location" class="text-[#ffcc80] text-xl"></ion-icon>
+                        <span>22, street 444 abcd efg</span>
+                    </div>
+                </div>
+                <div class="flex space-x-4 text-lg">
+                    <a href="#"><ion-icon name="logo-facebook" class="text-[#ffcc80]"></ion-icon></a>
+                    <a href="#"><ion-icon name="logo-twitter" class="text-[#ffcc80]"></ion-icon></a>
+                    <a href="#"><ion-icon name="logo-linkedin" class="text-[#ffcc80]"></ion-icon></a>
+                    <a href="#"><ion-icon name="logo-instagram" class="text-[#ffcc80]"></ion-icon></a>
+                </div>
+            </div>
+
+            <!-- form section -->
+            <div class="relative md:w-1/2">
+                <div class="absolute z-10 w-40 h-40 bg-[#ffcc80] rounded-full -right-28 -top-28"></div>
+                <div class="absolute z-10 w-40 h-40 bg-[#ffcc80] rounded-full -left-28 -bottom-16"></div>
+                <div class="relative z-10 bg-white rounded-xl shadow-lg p-8 text-gray-600">
+                    <form action="" class="flex flex-col space-y-4">
+                        <div>
+                            <label for="name" class="text-sm text-[#3e2723]">Your Name</label>
+                            <input type="text" id="name" placeholder="Your name" class="ring-1 ring-gray-300 w-full rounded-md px-4 py-2 mt-2 outline-none focus:ring-2 focus:ring-[#ffcc80]">
+                        </div>
+                        <div>
+                            <label for="email" class="text-sm text-[#3e2723]">Email Address</label>
+                            <input type="email" id="email" placeholder="Email Address" class="ring-1 ring-gray-300 w-full rounded-md px-4 py-2 mt-2 outline-none focus:ring-2 focus:ring-[#ffcc80]">
+                        </div>
+                        <div>
+                            <label for="message" class="text-sm text-[#3e2723]">Message</label>
+                            <textarea id="message" rows="4" placeholder="Leave us a message" class="ring-1 ring-gray-300 w-full rounded-md px-4 py-2 mt-2 outline-none focus:ring-2 focus:ring-[#ffcc80]"></textarea>
+                        </div>
+                        <button class="inline-block self-end bg-[#3e2723] hover:bg-[#ffcc80] text-white hover:text-[#3e2723] font-bold rounded-lg px-6 py-2 uppercase text-sm transition duration-300">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</html>
