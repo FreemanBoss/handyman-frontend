@@ -4,147 +4,110 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
-
-   const handleToggle = () => setIsOpen(!isOpen);
-
-    useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = 'hidden'; // Disable scrolling
-    } else {
-      document.body.style.overflow = 'auto'; // Enable scrolling
-    }
-    return () => {
-      document.body.style.overflow = 'auto'; // Clean up on unmount
-    };
-  }, [isOpen]);
-
 
   return (
-      <nav className="bg-white shadow-md sticky top-0 z-50">
-      <div className="container mx-auto px-4 py-2 flex items-center justify-between">
-        {/* Brand Name */}
-        <div className="flex items-center space-x-4">
-          <Link to="/" className="text-2xl font-bold text-gray-700">
-            Handyman
-          </Link>
+    <>
+   
+  {/* NAVBAR SECTION */}
+  <nav className="bg-[#3e2723] text-white fixed top-0 left-0 w-full  z-50">
+    
+    {/* Dark brown navbar */}
+    <div className="max-w-7xl mx-auto px-4">
+      <div className="flex justify-between items-center py-4">
+        {/* Logo */}
+        <div className="flex-shrink-0">
+           <a href="#" className="text-4xl text-[#ffcc80] font-bold">
+            HANDYMAN
+          </a> 
+          <div className=''></div>
         </div>
-
-        {/* Desktop Menu */}
-        <div className="hidden md:flex flex-grow justify-between items-center space-x-8">
-          <div className="flex-grow flex items-center justify-center space-x-8">
-            <Link
-              to="/"
-              className="text-gray-700 hover:text-teal-500 relative group transition-colors duration-300"
+        {/* Hamburger Icon (for mobile) */}
+        <div className="md:hidden">
+          <button
+            id="menu-button"
+            className="text-[#bca07d] hover:text-white focus:outline-none focus:text-white"
+          >
+            
+            {/* Light golden hover */}
+            <svg
+              className="h-6 w-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              Home
-              <span className="block h-0.5 bg-teal-500 absolute bottom-0 left-0 w-0 group-hover:w-full transition-all duration-300"></span>
-            </Link>
-            <Link
-              to="/about"
-              className="text-gray-700 hover:text-teal-500 relative group transition-colors duration-300"
-            >
-              About
-              <span className="block h-0.5 bg-teal-500 absolute bottom-0 left-0 w-0 group-hover:w-full transition-all duration-300"></span>
-            </Link>
-            <Link
-              to="/services"
-              className="text-gray-700 hover:text-teal-500 relative group transition-colors duration-300"
-            >
-              Services
-              <span className="block h-0.5 bg-teal-500 absolute bottom-0 left-0 w-0 group-hover:w-full transition-all duration-300"></span>
-            </Link>
-            <Link
-              to="/contact"
-              className="text-gray-700 hover:text-teal-500 relative group transition-colors duration-300"
-            >
-              Contact
-              <span className="block h-0.5 bg-teal-500 absolute bottom-0 left-0 w-0 group-hover:w-full transition-all duration-300"></span>
-            </Link>
-          </div>
-
-          {/* Authentication Links */}
-          <div className="flex items-center space-x-4">
-            <Link
-              to="/auth/signin"
-             className="bg-teal-500 text-white px-4 py-2 rounded-md hover:bg-teal-600 transition duration-200"
-            >
-              Sign In
-            </Link>
-            <Link
-              to="/auth/signup"
-              className="px-4 py-2 text-teal-500 bg-white border rounded-lg hover:bg-teal-50 transition-colors duration-300"
-            >
-              Sign Up
-            </Link>
-          </div>
-        </div>
-
-        {/* Hamburger Icon */}
-        <button onClick={handleToggle} className="md:hidden p-2">
-          {isOpen ? <XMarkIcon className="h-6 w-6 text-gray-700" /> : <Bars3Icon className="h-6 w-6 text-gray-700" />}
-        </button>
-      </div>
-
-      {/* Mobile Menu */}
-      <div className={`fixed inset-0 bg-gray-800 bg-opacity-75 z-50 transform ${isOpen ? 'translate-x-0' : 'translate-x-full'} transition-transform duration-300 ease-in-out`}>
-        <div className="relative h-full w-4/5 max-w-xs bg-gray-900 text-white flex flex-col">
-          {/* Close Button */}
-          <button onClick={handleToggle} className="absolute top-4 right-4 text-white">
-            <XMarkIcon className="h-8 w-8" />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4 6h16M4 12h16m-7 6h7"
+              />
+            </svg>
           </button>
-          <div className="flex flex-col items-center justify-center flex-grow space-y-4 mt-16">
-            <Link
-              to="/"
-              className="text-xl hover:text-teal-400 relative group transition-colors duration-300"
-              onClick={handleToggle}
-            >
-              Home
-              <span className="block h-0.5 bg-teal-400 absolute bottom-0 left-0 w-0 group-hover:w-full transition-all duration-300"></span>
-            </Link>
-            <Link
-              to="/about"
-              className="text-xl hover:text-teal-400 relative group transition-colors duration-300"
-              onClick={handleToggle}
-            >
-              About
-              <span className="block h-0.5 bg-teal-400 absolute bottom-0 left-0 w-0 group-hover:w-full transition-all duration-300"></span>
-            </Link>
-            <Link
-              to="/services"
-              className="text-xl hover:text-teal-400 relative group transition-colors duration-300"
-              onClick={handleToggle}
-            >
-              Services
-              <span className="block h-0.5 bg-teal-400 absolute bottom-0 left-0 w-0 group-hover:w-full transition-all duration-300"></span>
-            </Link>
-            <Link
-              to="/contact"
-              className="text-xl hover:text-teal-400 relative group transition-colors duration-300"
-              onClick={handleToggle}
-            >
-              Contact
-              <span className="block h-0.5 bg-blue-400 absolute bottom-0 left-0 w-0 group-hover:w-full transition-all duration-300"></span>
-            </Link>
-            <Link
-              to="/auth/signin"
-             className="bg-teal-500 text-white px-4 py-2 rounded-md hover:bg-teal-600 transition duration-200"
-            >
-              Sign In
-            </Link>
-            <Link
-              to="/auth/signup"
-              className="px-4 py-2 text-teal-500 bg-white border rounded-lg hover:bg-teal-50 transition-colors duration-300"
-            >
-              Sign Up
-            </Link>
-          </div>
+        </div>
+        {/* Navigation Links (for larger screens) */}
+        <div className="hidden md:flex space-x-8">
+          <Link to='/' className="text-base font-medium hover:text-[#ffcc80]">
+            Home
+          </Link>
+          {/* Soft orange hover */}
+          <a href="#" className="text-base font-medium hover:text-[#ffcc80]">
+            About
+          </a>
+          <a href="#" className="text-base font-medium hover:text-[#ffcc80]">
+            Services
+          </a>
+          <a href="#" className="text-base font-medium hover:text-[#ffcc80]">
+            Contact
+          </a>
+        </div>
+        {/* Sign In / Sign Up (for larger screens) */}
+        <div className="hidden md:flex space-x-4 ">
+          <Link to='/auth/signin'
+            className="text-base font-medium hover:text-[#ffcc80] mt-2">
+            Sign In
+          </Link>
+
+          <Link to='/auth/signup'
+            className="px-4 py-2 bg-[#ffcc80] text-white rounded-md font-medium hover:bg-[#3e2723]">
+            Sign Up
+          </Link>
+
+          {/* Dark brown button */}
         </div>
       </div>
-    </nav>
-
-);
+    </div>
+    {/* Mobile Menu */}
+    <div
+      id="mobile-menu"
+      className="hidden md:hidden bg-[#3e2723] px-4 py-4 space-y-2"
+    >
+      <a href="#" className="block text-base font-medium hover:text-[#ffcc80]">
+        Home
+      </a>
+      <a href="#" className="block text-base font-medium hover:text-[#ffcc80]">
+        About
+      </a>
+      <a href="#" className="block text-base font-medium hover:text-[#ffcc80]">
+        Services
+      </a>
+      <a href="#" className="block text-base font-medium hover:text-[#ffcc80]">
+        Contact
+      </a>
+      <a href="#" className="block text-base font-medium hover:text-[#bca07d]">
+        Sign In
+      </a>
+      <a
+        href="#"
+        className="block px-4 py-2 bg-[#5d4037] text-white rounded-md font-medium hover:bg-[#3e2723]"
+      >
+        Sign Up
+      </a>
+    </div>
+  </nav>
+</>
+  )
+  
 };
 
 export default Navbar;

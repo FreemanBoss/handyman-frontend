@@ -35,7 +35,7 @@ const LoginForm = () => {
         <FormLabel>Email address</FormLabel>
 
         <input
-          className="appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent shadow-sm transition duration-200 ease-in-out"
+          className="appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#bca07d] focus:border-transparent shadow-sm transition duration-200 ease-in-out"
           id="email"
           type="email"
           placeholder="Enter your email"
@@ -55,7 +55,7 @@ const LoginForm = () => {
         </label>
         <div className="relative">
           <input
-            className="appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent shadow-sm transition duration-200 ease-in-out pr-10"
+            className="appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#bca07d] focus:border-transparent shadow-sm transition duration-200 ease-in-out pr-10"
             id="password"
             type={showPassword ? "text" : "password"}
             placeholder="Enter your password"
@@ -116,9 +116,9 @@ const LoginForm = () => {
           align={"start"}
           justify={"space-between"}
         >
-          <Checkbox colorScheme="teal">Remember me</Checkbox>
+          <Checkbox colorScheme="orange">Remember me</Checkbox>
           <Link to="/login">
-            <Text color={""} className="dark:text-teal-500">
+            <Text color={""} className="dark:text-[#bca07d]">
               Forgot password?
             </Text>
           </Link>
@@ -137,7 +137,7 @@ const LoginForm = () => {
         Don’t have an account yet?
         <Link
           to="/auth/signup"
-          className="font-medium text-teal-600 hover:underline dark:text-teal-500"
+          className="font-medium text-[#ffcc80] hover:underline dark:text-[#bca07d]"
         >
           Sign up
         </Link>
