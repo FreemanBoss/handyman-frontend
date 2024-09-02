@@ -8,8 +8,11 @@ import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
 import ProtectedRoute from "./Components/ProtectedRoute";
 import Dashboard from "./Pages/dashboard.jsx";
+import useTokenRefresh from './hooks/useTokenRefresh.js';
+
 
 function App() {
+  useTokenRefresh()
   return (
     <Router>
       <Navbar />

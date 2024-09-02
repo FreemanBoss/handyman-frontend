@@ -31,3 +31,14 @@ export const logout = async () => {
         // throw new Error('Logout failed', error);
     }
 };
+
+export const refreshToken = async () => {
+    try {
+        const response = await apiClient.post('/auth/refresh');
+        console.log('Refresh token response:', response); // Log the response for debugging
+        return response; // Return the response so it can be used in your hook
+    } catch (error) {
+        console.log('Error refreshing token:', error);
+        return null; // Return null if there's an error
+    }
+};
