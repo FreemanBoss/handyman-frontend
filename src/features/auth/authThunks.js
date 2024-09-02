@@ -1,31 +1,37 @@
-import {
-    loginStart,
-    loginSuccess,
-    loginFailure,
-    logoutStart,
-    logoutSuccess,
-    logoutFailure,
-} from './authSlice';
-import { login, logout } from '../../api/authAPI';
+import { register, login, logout as apiLogout } from '../../api/authAPI';
+import { registerFailure, registerSuccess, loginSuccess, loginFailure, logout } from '../auth/authSlice';
 
 
-export const loginUser = (credentials) => 
-    async (dispatch) => {
-    dispatch(loginStart());
+export const performRegister = (credentials) => async (dispatch) => {
     try {
-        const user = await login(credentials);
-        dispatch(loginSuccess(user));
+        const user = await register(credentials);
+        dispatch(registerSuccess(user));
+        return Promise.resolve(user);
+        // Redirect or notify user to log in
     } catch (error) {
-        dispatch(loginFailure(error.message));
+        dispatch(registerFailure(error.message));
+        return Promise.reject(error);
     }
 };
 
-export const logoutUser = () => async (dispatch) => {
-    dispatch(logoutStart());
+export const performLogin = (credentials) => async (dispatch) => {
     try {
-        await logout();
-        dispatch(logoutSuccess());
+        const user = await login(credentials);
+        dispatch(loginSuccess(user));
+        return Promise.resolve(user);
     } catch (error) {
-        dispatch(logoutFailure(error.message));
+        dispatch(loginFailure(error.message));
+        return Promise.reject(error);
     }
+};
+
+export const performLogout = () => async (dispatch) => {
+        try {
+
+        await apiLogout();
+        dispatch(logout()); // Make sure this is correctly imported
+         } 
+         catch (error) {
+            console.log(error)
+      }
 };

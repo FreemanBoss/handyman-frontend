@@ -1,33 +1,59 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FormControl, FormLabel, Stack } from "@chakra-ui/react";
 import { validationSchema } from "../../schema/validationSchema";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-
+import { useDispatch, } from "react-redux";
+import { performRegister } from "../../features/auth/authThunks";
+import { toast} from 'react-toastify';
+import {SUCCESSFULL_REGISTER, REGISTERATION_FAILED} from '../../helpers/systemMessages'
 
 const SignUpForm = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
     formState: { errors, isSubmitting },
+    reset,
   } = useForm({
     resolver: zodResolver(validationSchema),
   });
 
-  const onSubmit = (data) => {
-    console.log("Form Submitted", data);
+             
+  
+  const onSubmit = async (data) => {
+    try {
+      const {  ...registrationData } = data;
+      await dispatch(performRegister(registrationData));
+
+     toast.success(SUCCESSFULL_REGISTER, {
+        position: "top-right",
+        autoClose: 2000, // Close the toast after 2 seconds
+      }); 
+      reset(); // Reset form fields after 
+      setTimeout(() => {
+        navigate('/auth/signin');
+        setTimeout(() => {
+          window.location.reload(); // Reload the page after navigating to login
+        }, 500); // Small delay to ensure navigation completes before reload
+      }, 2000);
+    } catch (error) {
+      console.error(error);
+       toast.error(error.message || REGISTERATION_FAILED);
+    }
   };
 
-  return (
+return (
     <form
       className="space-y-4 md:space-y-6 w-4/5"
       onSubmit={handleSubmit(onSubmit)}
     >
-      <FormControl id="email">
+      
+         <FormControl id="email">
         <FormLabel>User Name</FormLabel>
 
         <input
@@ -35,10 +61,10 @@ const SignUpForm = () => {
           id="text"
           type="text"
           placeholder="Enter your Username"
-          {...register("UserName")}
+          {...register("userName")}
         />
-        {errors.UserName && (
-          <p className="text-red-500">{errors.UserName.message}</p>
+        {errors.userName && (
+          <p className="text-red-500">{errors.userName.message}</p>
         )}
       </FormControl>
 

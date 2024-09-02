@@ -1,9 +1,12 @@
 import  { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import loginSchema from "../../schema/loginvalidation";
-
+import {useDispatch} from 'react-redux';
+import { performLogin } from "../../features/auth/authThunks";
+import { toast} from 'react-toastify';
+import  {LOGIN_SUCCESSFUL, LOGIN_FAILED} from '../../helpers/systemMessages'
 import {
   FormControl,
   FormLabel,
@@ -12,25 +15,49 @@ import {
   Text,
 } from "@chakra-ui/react";
 
+
+
+
 const LoginForm = () => {
   const [showPassword, setShowPassword] = useState(false);
+    const dispatch = useDispatch();
+  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors, isSubmitting },
   } = useForm({
     resolver: zodResolver(loginSchema),
   });
 
-  const onSubmit = (data) => {
+
+  
+
+  const onSubmit = async(data) => {
     console.log(data);
+    try{
+      await dispatch(performLogin(data)); // Assuming performLogin handles API call and Redux updates
+      toast.success(LOGIN_SUCCESSFUL, {
+        position: "top-right",
+        autoClose: 2000,
+      });
+       setTimeout(() => {
+        navigate('/'); // Redirect to the dashboard or another page after login
+      }, 2000);      
+    }catch(error){
+      toast.error(error.message || LOGIN_FAILED);
+    }
   };
+
+
+
 
   return (
     <form
       className="space-y-4 md:space-y-6 w-4/5"
       onSubmit={handleSubmit(onSubmit)}
     >
+      
       <FormControl>
         <FormLabel>Email address</FormLabel>
 
@@ -126,9 +153,11 @@ const LoginForm = () => {
         <button
           className="w-full flex items-center justify-center mt-4 text-white rounded-lg shadow-md hover:bg-gray-100 cursor-pointer dark:text-teal-500 "
           type="submit"
+          disabled={isSubmitting}
         >
+          
           <h1 className="px-4 py-3 w-full text-center text-gray-600 font-bold">
-            Sign in
+            {isSubmitting ? "Signing in..." : "Sign in"}
           </h1>
         </button>
       </Stack>

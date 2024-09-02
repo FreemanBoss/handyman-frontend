@@ -1,11 +1,11 @@
 import Hero from "../Components/Hero/Hero.jsx";
 import Services from "../Components/Services/Services.jsx";
-import Footer from "../Components/Footer/Footer.jsx";
 import Feature from "../Components/Feature/feature.jsx";
 import PricingTable from "../Components/PricingTable/PricingTable.jsx";
 import Gallery from "../Components/Gallery/Gallery.jsx";
 import Team from "../Components/Team/Team.jsx";
 import Contact from "../Components/Contact/Contact.jsx";
+
 
 const HomePage = () => {
   return (
