@@ -1,4 +1,3 @@
-import loginImage from "../../assets/images/login.jpg";
 import SignUpForm from '../../Components/Auth/siginup.component.auth'
 
 const SignUpPage = () => {

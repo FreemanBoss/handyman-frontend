@@ -1,5 +1,4 @@
 import LoginForm from "../../Components/Auth/Login.auth";
-import loginImage from "../../assets/images/login.jpg";
 
 
 const LoginPage = () => {

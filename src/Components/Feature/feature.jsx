@@ -19,7 +19,7 @@ const features = ()=> {
           At HandyMan, we take pride in delivering exceptional
           repair services. Our team of skilled professionals ensures 
           that every job is done to perfection, 
-          no matter how big or small. Whether it's fixing a leak 
+         no matter how big or small. Whether it is fixing a leak 
           or revamping a room, you can trust us to get it right the first time.
         </p>
         <div className="space-y-4">
