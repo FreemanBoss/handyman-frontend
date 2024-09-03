@@ -1,9 +1,12 @@
 import  { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import loginSchema from "../../schema/loginvalidation";
-
+import {useDispatch} from 'react-redux';
+import { performLogin } from "../../features/auth/authThunks";
+import { toast} from 'react-toastify';
+import  {LOGIN_SUCCESSFUL, LOGIN_FAILED} from '../../helpers/systemMessages'
 import {
   FormControl,
   FormLabel,
@@ -12,30 +15,54 @@ import {
   Text,
 } from "@chakra-ui/react";
 
+
+
+
 const LoginForm = () => {
   const [showPassword, setShowPassword] = useState(false);
+    const dispatch = useDispatch();
+  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors, isSubmitting },
   } = useForm({
     resolver: zodResolver(loginSchema),
   });
 
-  const onSubmit = (data) => {
+
+  
+
+  const onSubmit = async(data) => {
     console.log(data);
+    try{
+      await dispatch(performLogin(data)); // Assuming performLogin handles API call and Redux updates
+      toast.success(LOGIN_SUCCESSFUL, {
+        position: "top-right",
+        autoClose: 2000,
+      });
+       setTimeout(() => {
+        navigate('/'); // Redirect to the dashboard or another page after login
+      }, 2000);      
+    }catch(error){
+      toast.error(error.message || LOGIN_FAILED);
+    }
   };
+
+
+
 
   return (
     <form
       className="space-y-4 md:space-y-6 w-4/5"
       onSubmit={handleSubmit(onSubmit)}
     >
+      
       <FormControl>
         <FormLabel>Email address</FormLabel>
 
         <input
-          className="appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent shadow-sm transition duration-200 ease-in-out"
+          className="appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#bca07d] focus:border-transparent shadow-sm transition duration-200 ease-in-out"
           id="email"
           type="email"
           placeholder="Enter your email"
@@ -55,7 +82,7 @@ const LoginForm = () => {
         </label>
         <div className="relative">
           <input
-            className="appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent shadow-sm transition duration-200 ease-in-out pr-10"
+            className="appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#bca07d] focus:border-transparent shadow-sm transition duration-200 ease-in-out pr-10"
             id="password"
             type={showPassword ? "text" : "password"}
             placeholder="Enter your password"
@@ -116,9 +143,9 @@ const LoginForm = () => {
           align={"start"}
           justify={"space-between"}
         >
-          <Checkbox colorScheme="teal">Remember me</Checkbox>
+          <Checkbox colorScheme="orange">Remember me</Checkbox>
           <Link to="/login">
-            <Text color={""} className="dark:text-teal-500">
+            <Text color={""} className="dark:text-[#bca07d]">
               Forgot password?
             </Text>
           </Link>
@@ -126,9 +153,11 @@ const LoginForm = () => {
         <button
           className="w-full flex items-center justify-center mt-4 text-white rounded-lg shadow-md hover:bg-gray-100 cursor-pointer dark:text-teal-500 "
           type="submit"
+          disabled={isSubmitting}
         >
+          
           <h1 className="px-4 py-3 w-full text-center text-gray-600 font-bold">
-            Sign in
+            {isSubmitting ? "Signing in..." : "Sign in"}
           </h1>
         </button>
       </Stack>
@@ -137,7 +166,7 @@ const LoginForm = () => {
         Don’t have an account yet?
         <Link
           to="/auth/signup"
-          className="font-medium text-teal-600 hover:underline dark:text-teal-500"
+          className="font-medium text-[#ffcc80] hover:underline dark:text-[#bca07d]"
         >
           Sign up
         </Link>

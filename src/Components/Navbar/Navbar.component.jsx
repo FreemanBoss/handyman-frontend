@@ -1,150 +1,154 @@
-import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
-
+import { Link, useNavigate } from 'react-router-dom';
+import { useSelector, useDispatch } from "react-redux";
+import { performLogout } from '../../features/auth/authThunks';
+import { LOGOUT_SUCCESS, LOGOUT_FAILED } from '../../helpers/systemMessages';
+import { toast} from 'react-toastify';
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
 
+  const {isAuthenticated} = useSelector((state) => state.auth);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
-   const handleToggle = () => setIsOpen(!isOpen);
+  const handleLogout = async() => {
+    try{
+      await dispatch(performLogout()); 
+      toast.success(LOGOUT_SUCCESS); // Show success toast
+      setTimeout(() => {
+        navigate("/auth/signin"); // Navigate to login page after a short delay
+      }, 2000);
 
-    useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = 'hidden'; // Disable scrolling
-    } else {
-      document.body.style.overflow = 'auto'; // Enable scrolling
+    }catch(error){
+      console.log(error)
+          toast.error(LOGOUT_FAILED, {
+            position: "top-right",
+            autoClose: 2000, // Close the toast after 2 seconds
+        });
     }
-    return () => {
-      document.body.style.overflow = 'auto'; // Clean up on unmount
-    };
-  }, [isOpen]);
-
+   
+  };
 
   return (
-      <nav className="bg-white shadow-md sticky top-0 z-50">
-      <div className="container mx-auto px-4 py-2 flex items-center justify-between">
-        {/* Brand Name */}
-        <div className="flex items-center space-x-4">
-          <Link to="/" className="text-2xl font-bold text-gray-700">
-            Handyman
-          </Link>
-        </div>
-
-        {/* Desktop Menu */}
-        <div className="hidden md:flex flex-grow justify-between items-center space-x-8">
-          <div className="flex-grow flex items-center justify-center space-x-8">
-            <Link
-              to="/"
-              className="text-gray-700 hover:text-teal-500 relative group transition-colors duration-300"
-            >
-              Home
-              <span className="block h-0.5 bg-teal-500 absolute bottom-0 left-0 w-0 group-hover:w-full transition-all duration-300"></span>
-            </Link>
-            <Link
-              to="/about"
-              className="text-gray-700 hover:text-teal-500 relative group transition-colors duration-300"
-            >
-              About
-              <span className="block h-0.5 bg-teal-500 absolute bottom-0 left-0 w-0 group-hover:w-full transition-all duration-300"></span>
-            </Link>
-            <Link
-              to="/services"
-              className="text-gray-700 hover:text-teal-500 relative group transition-colors duration-300"
-            >
-              Services
-              <span className="block h-0.5 bg-teal-500 absolute bottom-0 left-0 w-0 group-hover:w-full transition-all duration-300"></span>
-            </Link>
-            <Link
-              to="/contact"
-              className="text-gray-700 hover:text-teal-500 relative group transition-colors duration-300"
-            >
-              Contact
-              <span className="block h-0.5 bg-teal-500 absolute bottom-0 left-0 w-0 group-hover:w-full transition-all duration-300"></span>
-            </Link>
-          </div>
-
-          {/* Authentication Links */}
-          <div className="flex items-center space-x-4">
-            <Link
-              to="/auth/signin"
-             className="bg-teal-500 text-white px-4 py-2 rounded-md hover:bg-teal-600 transition duration-200"
-            >
-              Sign In
-            </Link>
-            <Link
-              to="/auth/signup"
-              className="px-4 py-2 text-teal-500 bg-white border rounded-lg hover:bg-teal-50 transition-colors duration-300"
-            >
-              Sign Up
-            </Link>
-          </div>
-        </div>
-
-        {/* Hamburger Icon */}
-        <button onClick={handleToggle} className="md:hidden p-2">
-          {isOpen ? <XMarkIcon className="h-6 w-6 text-gray-700" /> : <Bars3Icon className="h-6 w-6 text-gray-700" />}
+    <>
+   
+  {/* NAVBAR SECTION */}
+ <nav className="bg-[#3e2723] text-white fixed top-0 left-0 w-full z-50">
+  {/* Dark brown navbar */}
+  <div className="max-w-7xl mx-auto px-4">
+    <div className="flex justify-between items-center py-4">
+      {/* Logo */}
+      <div className="flex-shrink-0">
+        <a href="#" className="text-4xl text-[#ffcc80] font-bold">
+          HANDYMAN
+        </a>
+      </div>
+      {/* Hamburger Icon (for mobile) */}
+      <div className="md:hidden">
+        <button
+          id="menu-button"
+          className="text-[#bca07d] hover:text-white focus:outline-none focus:text-white"
+        >
+          {/* Light golden hover */}
+          <svg
+            className="h-6 w-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M4 6h16M4 12h16m-7 6h7"
+            />
+          </svg>
         </button>
       </div>
-
-      {/* Mobile Menu */}
-      <div className={`fixed inset-0 bg-gray-800 bg-opacity-75 z-50 transform ${isOpen ? 'translate-x-0' : 'translate-x-full'} transition-transform duration-300 ease-in-out`}>
-        <div className="relative h-full w-4/5 max-w-xs bg-gray-900 text-white flex flex-col">
-          {/* Close Button */}
-          <button onClick={handleToggle} className="absolute top-4 right-4 text-white">
-            <XMarkIcon className="h-8 w-8" />
+      {/* Navigation Links (for larger screens) */}
+      <div className="hidden md:flex space-x-8">
+        <Link to="/" className="text-base font-medium hover:text-[#ffcc80]">
+          Home
+        </Link>
+        {/* Soft orange hover */}
+        <a href="#" className="text-base font-medium hover:text-[#ffcc80]">
+          About
+        </a>
+        <a href="#" className="text-base font-medium hover:text-[#ffcc80]">
+          Services
+        </a>
+        <a href="#" className="text-base font-medium hover:text-[#ffcc80]">
+          Contact
+        </a>
+      </div>
+      {/* Conditional Rendering of Auth Links */}
+      <div className="hidden md:flex space-x-4">
+        {isAuthenticated ? (
+          <button
+            onClick={handleLogout}
+            className="px-4 py-2 bg-[#ffcc80] text-white rounded-md font-medium hover:bg-[#3e2723]"
+          >
+            Sign Out
           </button>
-          <div className="flex flex-col items-center justify-center flex-grow space-y-4 mt-16">
-            <Link
-              to="/"
-              className="text-xl hover:text-teal-400 relative group transition-colors duration-300"
-              onClick={handleToggle}
-            >
-              Home
-              <span className="block h-0.5 bg-teal-400 absolute bottom-0 left-0 w-0 group-hover:w-full transition-all duration-300"></span>
-            </Link>
-            <Link
-              to="/about"
-              className="text-xl hover:text-teal-400 relative group transition-colors duration-300"
-              onClick={handleToggle}
-            >
-              About
-              <span className="block h-0.5 bg-teal-400 absolute bottom-0 left-0 w-0 group-hover:w-full transition-all duration-300"></span>
-            </Link>
-            <Link
-              to="/services"
-              className="text-xl hover:text-teal-400 relative group transition-colors duration-300"
-              onClick={handleToggle}
-            >
-              Services
-              <span className="block h-0.5 bg-teal-400 absolute bottom-0 left-0 w-0 group-hover:w-full transition-all duration-300"></span>
-            </Link>
-            <Link
-              to="/contact"
-              className="text-xl hover:text-teal-400 relative group transition-colors duration-300"
-              onClick={handleToggle}
-            >
-              Contact
-              <span className="block h-0.5 bg-blue-400 absolute bottom-0 left-0 w-0 group-hover:w-full transition-all duration-300"></span>
-            </Link>
-            <Link
-              to="/auth/signin"
-             className="bg-teal-500 text-white px-4 py-2 rounded-md hover:bg-teal-600 transition duration-200"
-            >
+        ) : (
+          <>
+            <Link to="/auth/signin" className="text-base font-medium hover:text-[#ffcc80] mt-2">
               Sign In
             </Link>
             <Link
               to="/auth/signup"
-              className="px-4 py-2 text-teal-500 bg-white border rounded-lg hover:bg-teal-50 transition-colors duration-300"
+              className="px-4 py-2 bg-[#ffcc80] text-white rounded-md font-medium hover:bg-[#3e2723]"
             >
               Sign Up
             </Link>
-          </div>
-        </div>
+          </>
+        )}
       </div>
-    </nav>
+    </div>
+  </div>
+  {/* Mobile Menu */}
+  <div
+    id="mobile-menu"
+    className="hidden md:hidden bg-[#3e2723] px-4 py-4 space-y-2"
+  >
+    <a href="#" className="block text-base font-medium hover:text-[#ffcc80]">
+      Home
+    </a>
+    <a href="#" className="block text-base font-medium hover:text-[#ffcc80]">
+      About
+    </a>
+    <a href="#" className="block text-base font-medium hover:text-[#ffcc80]">
+      Services
+    </a>
+    <a href="#" className="block text-base font-medium hover:text-[#ffcc80]">
+      Contact
+    </a>
+    {isAuthenticated ? (
+      <button
+        onClick={handleLogout}
+        className="block px-4 py-2 bg-[#ffcc80] text-white rounded-md font-medium hover:bg-[#3e2723]"
+      >
+        Sign Out
+      </button>
+    ) : (
+      <>
+        <a href="/auth/signin" className="block text-base font-medium hover:text-[#ffcc80]">
+          Sign In
+        </a>
+        <a
+          href="/auth/signup"
+          className="block px-4 py-2 bg-[#ffcc80] text-white rounded-md font-medium hover:bg-[#3e2723]"
+        >
+          Sign Up
+        </a>
+      </>
+    )}
+  </div>
+</nav>
 
-);
+</>
+  )
+  
 };
 
 export default Navbar;

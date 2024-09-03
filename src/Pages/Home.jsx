@@ -1,7 +1,11 @@
 import Hero from "../Components/Hero/Hero.jsx";
 import Services from "../Components/Services/Services.jsx";
-import Reviews from "../Components/Reviews/Reviews.jsx";
-import Footer from "../Components/Footer/Footer.jsx";
+import Feature from "../Components/Feature/feature.jsx";
+import PricingTable from "../Components/PricingTable/PricingTable.jsx";
+import Gallery from "../Components/Gallery/Gallery.jsx";
+import Team from "../Components/Team/Team.jsx";
+import Contact from "../Components/Contact/Contact.jsx";
+
 
 const Name = "habeeb";
 const HomePage = () => {
@@ -16,13 +20,31 @@ const HomePage = () => {
         <Services />
       </section>
 
-      <section id="reviews">
-        <Reviews />
+      <section>
+        <Feature />
       </section>
 
-      <section id="footer">
-        <Footer />
+      <section>
+        <PricingTable />
       </section>
+
+      <section>
+        <Gallery />
+      </section>
+
+      <section>
+        <Team />
+      </section>
+
+      <section>
+        <Contact />
+      </section>
+
+      {/* <section id="footer">
+        <Footer />
+      </section> */}
+
+      
     </>
   );
 };

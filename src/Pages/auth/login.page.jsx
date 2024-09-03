@@ -1,10 +1,8 @@
 import LoginForm from "../../Components/Auth/Login.auth";
-import loginImage from "../../assets/images/login.jpg";
 
 const Name = "habeeb";
 const LoginPage = () => {
-
-
+  
 
 
   return (
@@ -38,9 +36,9 @@ const LoginPage = () => {
           </div>
           <LoginForm />
         </div>
-        <div className="w-1/2 max-sm:w-full h-[600px] max-sm:h-[400px] flex items-center self-end max-sm:self-center bg-gradient-to-t from-teal-200 to-teal-700 rounded-2xl m-4 overflow-hidden">
+        <div className="w-1/2 max-sm:w-full h-[600px] max-sm:h-[400px] flex items-center self-end max-sm:self-center bg-gradient-to-t from-[#ffcc80] to-[#bca07d] rounded-2xl m-4 overflow-hidden">
           <img
-            src={loginImage}
+            src='../src/assets/images/Hero.jpg'
             alt="bike"
             className="w-full h-full object-cover"
           />
