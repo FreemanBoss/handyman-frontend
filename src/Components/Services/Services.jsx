@@ -5,11 +5,10 @@ const Services = () => {
     <>
   {/* Services Section */}
   <section className="py-20 bg-[#f4ece4]">
-    {" "}
     {/* Light beige background */}
     <div className="container mx-auto px-6">
       <h2 className="text-center text-3xl font-bold text-[#3e2723]">
-        {" "}
+  
         {/* Dark brown text */}
         We Are The Number One Repair Service Provider
       </h2>

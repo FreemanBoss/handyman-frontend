@@ -1,4 +1,3 @@
-import React from 'react'
 
 const PricingTable = () => {
   return (
@@ -32,8 +31,8 @@ const PricingTable = () => {
             Extended Pack
           </h4>
           <p className="text-[#ffcc80] mb-6">
-          Whether you're tackling a larger project or need multiple 
-          repairs done at once, the Extended Pack provides the 
+          Whether you are tackling a larger project or need multiple 
+          repairs done at once. The Extended Pack provides the 
           expertise and quality you can rely on to keep your 
           home in peak condition.
           </p>

@@ -1,22 +1,37 @@
-const Hero = () => {
+import { useEffect } from "react"
+import { gsap} from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+
+gsap.registerPlugin(ScrollTrigger);
+
+const Hero = ()=> {
+
+  useEffect( ()=>{
+    // Animate the header text and button
+
+
+  }, [])
+
+  
+
   return(
-    <>
+  <>
   {/* Header Section */}
-  <header className="relative bg-[url('../src/assets/images/Hero.jpg')] bg-cover bg-center h-screen">
+  <header className=" relative bg-[url('../src/assets/images/Hero.jpg')] bg-cover bg-center h-screen">
     <div className="absolute inset-0 bg-black opacity-60" />
     {/* Darker overlay */}
-    <div className="container mx-auto px-6 py-2 text-center relative top-1/2">
+    <div className=" header-text container mx-auto px-6 py-2 text-center relative top-1/2" data-aos="fade-down">
       <h1 className="text-4xl font-bold text-[#f4ece4]">
         Best Handyman Services
       </h1>
       {/* Light beige text */}
-      <p className="mt-4 text-[#f4ece4]">
+      <p className="mt-4 text-[#f4ece4]" >
       Reliable professionals for all your home repair and maintenance needs.
        </p>
       
-      <button className="mt-6 bg-[#ffb74d] text-white px-6 py-3 rounded-full hover:bg-[#f57c00]">
-        
-        {/* Bright orange button */}
+      <button className=" header-button mt-6  bg-[#ffb74d] text-white px-6 py-3 rounded-full hover:bg-[#f57c00]" data-aos="zoom-in">
+  
         Learn More
       </button>
     </div>

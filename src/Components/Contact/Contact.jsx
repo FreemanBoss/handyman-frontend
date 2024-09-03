@@ -1,4 +1,5 @@
-import React from 'react'
+
+import { Link } from 'react-router-dom'
 
 const Contact = () => {
   return (
@@ -13,9 +14,12 @@ const Contact = () => {
         <h3 className="mt-2 text-3xl font-bold">
           Our Team Is Ready and Always Available
         </h3>
+
+        <Link to="/contactform">
         <button className="mt-6 px-6 py-3 bg-yellow-500 text-white font-semibold rounded-md hover:bg-yellow-600">
           Contact Us
         </button>
+        </Link>
       </div>
       <img
         className="w-full h-64 object-cover"
@@ -29,4 +33,4 @@ const Contact = () => {
   )
 }
 
-export default Contact
+export default Contact;

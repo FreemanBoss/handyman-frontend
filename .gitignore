@@ -391,4 +391,6 @@ dist
 /.env
 /.env.*.local
 *._local.ts
-node_modules/
+
+eslint.config.js
+.gitignore

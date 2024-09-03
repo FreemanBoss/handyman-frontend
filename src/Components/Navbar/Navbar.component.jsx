@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react';
+// import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
+// import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 
 
 const Navbar = () => {
@@ -9,25 +9,24 @@ const Navbar = () => {
     <>
    
   {/* NAVBAR SECTION */}
-  <nav className="bg-[#3e2723] text-white fixed top-0 left-0 w-full  z-50">
+  <nav className="bg-[#3e2723] text-white fixed top-0 left-0 w-full  z-50" data-aos="fade-down">
     
     {/* Dark brown navbar */}
     <div className="max-w-7xl mx-auto px-4">
       <div className="flex justify-between items-center py-4">
         {/* Logo */}
-        <div className="flex-shrink-0">
-           <a href="#" className="text-4xl text-[#ffcc80] font-bold">
-            HANDYMAN
+        <div className="flex-shrink-0" data-aos="fade-right">
+           <a href="#" className="text-2xl text-[#ffcc80] font-bold">
+            Logo
           </a> 
-          <div className=''></div>
         </div>
+
         {/* Hamburger Icon (for mobile) */}
-        <div className="md:hidden">
+        <div className="md:hidden" data-aos="fade-left">
           <button
             id="menu-button"
             className="text-[#bca07d] hover:text-white focus:outline-none focus:text-white"
           >
-            
             {/* Light golden hover */}
             <svg
               className="h-6 w-6"
@@ -46,7 +45,7 @@ const Navbar = () => {
           </button>
         </div>
         {/* Navigation Links (for larger screens) */}
-        <div className="hidden md:flex space-x-8">
+        <div className="hidden md:flex space-x-8" data-aos="fade-down">
           <Link to='/' className="text-base font-medium hover:text-[#ffcc80]">
             Home
           </Link>
@@ -62,7 +61,7 @@ const Navbar = () => {
           </a>
         </div>
         {/* Sign In / Sign Up (for larger screens) */}
-        <div className="hidden md:flex space-x-4 ">
+        <div className="hidden md:flex space-x-4 " data-aos="fade-left">
           <Link to='/auth/signin'
             className="text-base font-medium hover:text-[#ffcc80] mt-2">
             Sign In
@@ -80,7 +79,7 @@ const Navbar = () => {
     {/* Mobile Menu */}
     <div
       id="mobile-menu"
-      className="hidden md:hidden bg-[#3e2723] px-4 py-4 space-y-2"
+      className="hidden md:hidden bg-[#3e2723] px-4 py-4 space-y-2" data-aos="fade-down"
     >
       <a href="#" className="block text-base font-medium hover:text-[#ffcc80]">
         Home
