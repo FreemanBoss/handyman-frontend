@@ -7,7 +7,6 @@ import Team from "../Components/Team/Team.jsx";
 import Contact from "../Components/Contact/Contact.jsx";
 
 
-const Name = "habeeb";
 const HomePage = () => {
   return (
     <>
