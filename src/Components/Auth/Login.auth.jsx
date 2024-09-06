@@ -36,13 +36,13 @@ const LoginForm = () => {
   const onSubmit = async(data) => {
     console.log(data);
     try{
-      await dispatch(performLogin(data)); // Assuming performLogin handles API call and Redux updates
+      await dispatch(performLogin(data));
       toast.success(LOGIN_SUCCESSFUL, {
         position: "top-right",
         autoClose: 2000,
       });
        setTimeout(() => {
-        navigate('/'); // Redirect to the dashboard or another page after login
+        navigate('/');
       }, 2000);      
     }catch(error){
       toast.error(error.message || LOGIN_FAILED);
