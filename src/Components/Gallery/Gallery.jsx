@@ -7,28 +7,28 @@ const Gallery = () => {
   {/* Image Scrolling Section */}
   <div className="overflow-hidden relative">
     <div className="flex animate-scroll">
-      <div className="flex-none w-1/2 md:w-2/12">
+      <div className="flex-none w-1/2 md:w-1/4">
         <img
           className="w-full h-48 object-contain"
           src="../src/assets/images/cleaning_img.jpg"
           alt="Image 1"
         />
       </div>
-      <div className="flex-none w-1/2 md:w-2/12">
+      <div className="flex-none w-1/2 md:w-1/4">
         <img
           className="w-full h-48 object-contain"
           src="../src/assets/images/plumbing.jpg"
           alt="Image 2"
         />
       </div>
-      <div className="flex-none w-1/2 md:w-2/12">
+      <div className="flex-none w-1/2 md:w-1/4">
         <img
           className="w-full h-48 object-contain"
           src="../src/assets/images/cleaning4.jpg"
           alt="Image 3"
         />
       </div>
-      <div className="flex-none w-1/2 md:w-2/12">
+      <div className="flex-none w-1/2 md:w-1/4">
         <img
           className="w-full h-48 object-contain"
           src="../src/assets/images/AirConditioning.jpg"

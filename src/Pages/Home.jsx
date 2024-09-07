@@ -8,6 +8,7 @@ import Contact from "../Components/Contact/Contact.jsx";
 import Testimonial from "../Components/Testimonial/Testimonial.jsx";
 import NewsLetter from "../Components/NewsLetter/NewsLetter.jsx";
 
+
 const HomePage = () => {
   return (
     <>

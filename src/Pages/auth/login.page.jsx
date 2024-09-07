@@ -1,11 +1,7 @@
 import LoginForm from "../../Components/Auth/Login.auth";
 
-
-
 const LoginPage = () => {
   
-
-
   return (
       
     <div className="min-h-[90%] flex justify-center items-center">

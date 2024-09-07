@@ -11,6 +11,11 @@ import ContactForm from "./Pages/ContactForm.jsx";
 
 
 
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
+import ProtectedRoute from "./Components/ProtectedRoute";
+import Dashboard from "./Pages/dashboard.jsx";
+import useTokenRefresh from './hooks/useTokenRefresh.js';
 
 
 function App() {
@@ -24,16 +29,27 @@ function App() {
       // once: true
     })
   })
-
+  useTokenRefresh()
   return (
     <Router>
       <Navbar />
+      <ToastContainer />
       
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/auth/signin" element={<LoginPage />} />
         <Route path="/auth/signup" element={<SignUpPage />} />
         <Route path="/contactform" element={<ContactForm />}/>
+        
+        {/* This is how you should implement the ProtectedRoute */}
+        <Route 
+          path="/dashboard" 
+          element={
+            <ProtectedRoute>
+              <Dashboard />
+            </ProtectedRoute>
+          } 
+        />
       </Routes>
       
       <Footer />
