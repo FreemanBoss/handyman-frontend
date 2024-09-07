@@ -23,23 +23,23 @@ const SignUpForm = () => {
     resolver: zodResolver(validationSchema),
   });
 
-             
+          
   
   const onSubmit = async (data) => {
     try {
-      const {  ...registrationData } = data;
+      const { confirmPassword, ...registrationData } = data; // eslint-disable-line no-unused-vars
       await dispatch(performRegister(registrationData));
 
      toast.success(SUCCESSFULL_REGISTER, {
         position: "top-right",
-        autoClose: 2000, // Close the toast after 2 seconds
+        autoClose: 2000,
       }); 
-      reset(); // Reset form fields after 
+      reset(); 
       setTimeout(() => {
         navigate('/auth/signin');
         setTimeout(() => {
-          window.location.reload(); // Reload the page after navigating to login
-        }, 500); // Small delay to ensure navigation completes before reload
+          window.location.reload(); 
+        }, 500); 
       }, 2000);
     } catch (error) {
       console.error(error);
