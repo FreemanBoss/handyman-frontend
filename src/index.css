@@ -30,3 +30,14 @@ body {
   font-weight: 500;
 
 }
+
+/* Custom classes for checkbox toggle effect */
+input[type="checkbox"]:checked ~ .login {
+  transform: translateY(5px);
+}
+input[type="checkbox"]:checked ~ .login label {
+  transform: scale(1);
+}
+input[type="checkbox"]:checked ~ .signup label {
+  transform: scale(0.6);
+}

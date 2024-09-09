@@ -9,6 +9,7 @@ import { ToastContainer } from 'react-toastify';
 import ProtectedRoute from "./Components/ProtectedRoute";
 import Dashboard from "./Pages/dashboard.jsx";
 import useTokenRefresh from './hooks/useTokenRefresh.js';
+import Form from './Components/selectFrom.jsx'
 
 
 function App() {
@@ -17,13 +18,22 @@ function App() {
     <Router>
       <Navbar />
       <ToastContainer />
-      
+  
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/auth/signin" element={<LoginPage />} />
         <Route path="/auth/signup" element={<SignUpPage />} />
-        
+        {/* <Route path="/userType" element={<Form/>} />       */}
         {/* This is how you should implement the ProtectedRoute */}
+
+         <Route 
+          path="/userType" 
+          element={
+            <ProtectedRoute>
+              <Form/>
+            </ProtectedRoute>
+          } 
+        />
         <Route 
           path="/dashboard" 
           element={

@@ -1,6 +1,6 @@
-import { register, login, logout as apiLogout } from '../../api/authAPI';
-import { registerFailure, registerSuccess, loginSuccess, loginFailure, logout } from '../auth/authSlice';
-
+import { register, login, logout as apiLogout, googleAuth } from '../../api/authAPI';
+import { createAsyncThunk } from '@reduxjs/toolkit';
+import { registerFailure, registerSuccess,  logout } from '../auth/authSlice';
 
 export const performRegister = (credentials) => async (dispatch) => {
     try {
@@ -14,16 +14,17 @@ export const performRegister = (credentials) => async (dispatch) => {
     }
 };
 
-export const performLogin = (credentials) => async (dispatch) => {
+export const performLogin = createAsyncThunk(
+  'auth/performLogin',
+  async (credentials, { rejectWithValue }) => {
     try {
-        const user = await login(credentials);
-        dispatch(loginSuccess(user));
-        return Promise.resolve(user);
+      const response = await login(credentials);
+      return response.data; // Return the user object from response
     } catch (error) {
-        dispatch(loginFailure(error.message));
-        return Promise.reject(error);
+      return rejectWithValue(error.response?.data?.message || 'Login failed');
     }
-};
+  }
+);
 
 export const performLogout = () => async (dispatch) => {
         try {
@@ -34,4 +35,13 @@ export const performLogout = () => async (dispatch) => {
          catch (error) {
             console.log(error)
       }
+};
+
+export const performGoogleAuth = () => async (dispatch) => {
+  try {
+    await googleAuth();
+  } catch (error) {
+    dispatch(registerFailure(error.message));
+    return Promise.reject(error);
+  }
 };
