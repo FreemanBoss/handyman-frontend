@@ -1,20 +1,12 @@
-import { useEffect } from "react"
-import { gsap} from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+// import { useEffect } from "react"
+// import { gsap} from "gsap";
+// import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 
-gsap.registerPlugin(ScrollTrigger);
+// gsap.registerPlugin(ScrollTrigger);
 
 const Hero = ()=> {
-
-  useEffect( ()=>{
-    // Animate the header text and button
-
-
-  }, [])
-
   
-
   return(
   <>
   {/* Header Section */}
@@ -30,7 +22,7 @@ const Hero = ()=> {
       Reliable professionals for all your home repair and maintenance needs.
        </p>
       
-      <button className=" header-button mt-6  bg-[#ffb74d] text-white px-6 py-3 rounded-full hover:bg-[#f57c00]" data-aos="zoom-in">
+      <button className=" header-button mt-6  bg-[#ffb74d] text-white px-6 py-3 rounded-full hover:bg-[#f57c00]" data-aos="fade-up">
   
         Learn More
       </button>
