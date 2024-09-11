@@ -16,10 +16,10 @@ const Testimonial = () => {
           What Our Clients Say About Our Services
         </h3>
         <p className="mt-4 max-w-2xl mx-auto text-base leading-relaxed">
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident sunt in culpa qui officia deserunt mollit anim id est
-          laborum.
+        I could not be happier with the service! The team was professional, 
+        on time, and did an excellent job repairing my leaky roof. 
+        They explained everything clearly and worked efficiently. 
+        I will definitely be using their services again!
         </p>
         <div className="mt-6 flex flex-col items-center">
           <img
@@ -28,7 +28,7 @@ const Testimonial = () => {
             alt="Customer"
           />
           <p className="mt-4 text-lg font-medium">Rene Harmon</p>
-          <p className="text-sm">Customer</p>
+          <p className="text-sm">Satisfied Customer</p>
         </div>
       </div>
     </div>
