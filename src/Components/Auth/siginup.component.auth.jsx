@@ -23,7 +23,7 @@ const SignUpForm = () => {
     resolver: zodResolver(validationSchema),
   });
 
-          
+         
   
   const onSubmit = async (data) => {
     try {
