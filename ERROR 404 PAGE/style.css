@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #8FB8DE;
+}
+.all{
+    padding: 30px 30px;
+}
+header h3{
+    position: absolute;
+    width: 133px;
+height: 25px;
+top: 25px;
+left: 77px;
+gap: 0px;
+opacity: 0px;
+
+}
+.both{
+    padding: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.scarerow img{
+    width: 539.22px;
+height: 447.43px;
+top: 265px;
+left: 77px;
+gap: 0px;
+opacity: 0px;
+overflow: hidden;
+z-index: 9999999;
+animation: bounce 2s infinite;
+}
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+.text h2{
+    width: 586px;
+height: 190px;
+top: 265px;
+left: 735px;
+gap: 0px;
+opacity: 0px;
+
+    font-family: Space "Mono";
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 94.78px;
+    letter-spacing: -0.035em;
+    text-align: left;
+}
+.text p{
+    width: 381px;
+height: 108px;
+top: 491px;
+left: 736px;
+gap: 0px;
+opacity: 0px;
+
+    font-family: Space Mono;
+font-size: 24px;
+font-weight: 400;
+line-height: 35.54px;
+letter-spacing: -0.035em;
+text-align: left;
+}
+.text button{
+    width: 216px;
+height: 68px;
+top: -663px;
+left: 740px;
+gap: 10px;
+opacity: 0px;
+border: none;
+outline: none;
+border-radius: 10px;
+color: white;
+background: #000;
+}
+footer p{
+top: 1039em;
+font-family: "Montserrat";
+font-size: 14px;
+font-weight: 500;
+line-height: 17.07px;
+text-align: center;
+
+}

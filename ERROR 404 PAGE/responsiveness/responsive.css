@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+header h3 {
+ width: 133px;
+height: 25px;
+top: 20px;
+left: 24px;
+gap: 0px;
+opacity: 0px;
+
+}
+
+.both {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* .scarerow img {
+width: 286.83px;
+height: 238px;
+top: 109px;
+left: 44px;
+gap: 0px;
+opacity: 0px;
+
+} */
+
+.text h2 {
+    font-family: Space "Mono";
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 71.09px;
+    letter-spacing: -0.035em;
+    text-align: left;
+    width: 350px;
+height: 142px;
+top: 407px;
+left: 24px;
+gap: 0px;
+opacity: 0px;
+
+}
+
+.text p {
+    font-size: 1rem;
+    margin-bottom: 25px;
+}
+
+.text button {
+    padding: 15px 30px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer p {
+font-family: "Montserrat";
+font-size: 14px;
+font-weight: 500;
+line-height: 17.07px;
+text-align: center;
+
+}
+
+/* Responsive Design */
+
+/* Small devices (mobile) */
+@media only screen and (max-width: 600px) {
+
+    .text h2 {
+        font-family: Space "Mono";
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 71.09px;
+        letter-spacing: -0.035em;
+        text-align: left;
+        height: 142px;
+        top: 407px;
+        left: 24px;
+        gap: 0px;
+        opacity: 0px;
+    }
+
+    .text p {
+        width: 328px;
+height: 81px;
+top: 579px;
+left: 23px;
+gap: 0px;
+opacity: 0px;
+
+    }
+
+    .text button {
+        width: 216px;
+height: 68px;
+top: 726px;
+left: 24px;
+gap: 0px;
+opacity: 0px;
+    }
+    footer p {
+    opacity: 0px;
+    font-family: "Montserrat";
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17.07px;
+    text-align: center;
+    
+    }
+}
+
+/* Medium devices (tablets) */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    .both {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .text h2 {
+        font-size: 1.75rem;
+    }
+
+    .text p {
+        font-size: 1rem;
+    }
+
+    .text button {
+        width: 100%;
+        max-width: 300px;
+        padding: 12px;
+    }
+}
+
+/* Large devices (desktops) */
+@media only screen and (min-width: 1025px) {
+    .both {
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .text h2 {
+        font-size: 2.5rem;
+    }
+
+    .text p {
+        font-size: 1.125rem;
+    }
+
+    .text button {
+        max-width: 200px;
+        padding: 15px;
+    }
+}
+
