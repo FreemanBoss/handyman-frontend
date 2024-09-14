@@ -1,14 +1,15 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { performLogin } from "./authThunks"; // Adjust path as needed
 
-// Get `isAuthenticated` from localStorage and handle `null` safely
 const isAuthenticatedFromStorage = localStorage.getItem('isAuthenticated');
-// const isAuthenticated = isAuthenticatedFromStorage ? JSON.parse(isAuthenticatedFromStorage) : false;
+const hasCompletedInitialSetupFromStorage = localStorage.getItem('hasCompletedInitialSetup');
 
 const initialState = {
     user: null,
     isAuthenticated: Boolean(isAuthenticatedFromStorage) || false,
     loading: false,
-    error: null
+    error: null,
+    hasCompletedInitialSetup: Boolean(hasCompletedInitialSetupFromStorage) || false,
 };
 
 const authSlice = createSlice({
@@ -31,8 +32,9 @@ const authSlice = createSlice({
             state.loading = false;
             state.isAuthenticated = true;
             state.user = action.payload;
-            // Save authentication state to localStorage
+            state.hasCompletedInitialSetup = action.payload.hasCompletedInitialSetup || false;
             localStorage.setItem('isAuthenticated', JSON.stringify(true));
+            localStorage.setItem('hasCompletedInitialSetup', JSON.stringify(action.payload.hasCompletedInitialSetup || false));
         },
         loginFailure(state, action) {
             state.loading = false;
@@ -41,11 +43,33 @@ const authSlice = createSlice({
         logout(state) {
             state.isAuthenticated = false;
             state.user = null;
+            state.hasCompletedInitialSetup = false;
             localStorage.removeItem('isAuthenticated');
+            localStorage.removeItem('hasCompletedInitialSetup');
         }
+    },
+    extraReducers: (builder) => {
+        builder
+            .addCase(performLogin.pending, (state) => {
+                state.loading = true;
+                state.error = null;
+            })
+            .addCase(performLogin.fulfilled, (state, action) => {
+                state.loading = false;
+                state.isAuthenticated = true;
+                state.user = action.payload;
+                state.hasCompletedInitialSetup = action.payload.hasCompletedInitialSetup || false;
+                localStorage.setItem('isAuthenticated', JSON.stringify(true));
+                localStorage.setItem('hasCompletedInitialSetup', JSON.stringify(action.payload.hasCompletedInitialSetup || false));
+            })
+            .addCase(performLogin.rejected, (state, action) => {
+                state.loading = false;
+                state.error = action.payload || 'Login failed';
+            });
     }
 });
 
 export const { loginStart, loginSuccess, loginFailure, logout, registerSuccess, registerFailure } = authSlice.actions;
 
 export default authSlice.reducer;
+

@@ -16,8 +16,10 @@ export const register = async (credentials) => {
 export const login = async (credentials) => {
     try {
         const response = await apiClient.post('/auth/login', credentials);
-        console.log(response)
-        return response.data.user; 
+        console.log("API Response:", response.data); // Log the full response
+
+        // Extract the user from the data field
+        return response.data;  // Assuming the user info is inside the "data" field
     } catch (error) {
         throw new Error(error.response?.data?.message || 'Login failed');
     }
@@ -42,3 +44,11 @@ export const refreshToken = async () => {
         return null; // Return null if there's an error
     }
 };
+export const googleAuth = async() =>{
+ try {
+    window.location.href = 'http://localhost:5000/api/v1/auth/google'; 
+  } catch (error) {
+    console.error('Google OAuth initiation failed:', error);
+    throw error;
+  }
+}

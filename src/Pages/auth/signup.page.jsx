@@ -1,6 +1,26 @@
 import SignUpForm from '../../Components/Auth/siginup.component.auth'
+import { useDispatch } from 'react-redux';
+import { performGoogleAuth } from '../../features/auth/authThunks';
+import { useSearchParams } from 'react-router-dom';
+import { useEffect } from 'react';
+import { toast} from 'react-toastify';
 
 const SignUpPage = () => {
+  const dispatch = useDispatch()
+   const [searchParams] = useSearchParams();
+
+
+   useEffect(() => {
+    const error = searchParams.get('error');
+    if (error === 'google_auth_failed') {
+      toast.error('Google authentication canceled. Please try again.');
+    }
+  }, [searchParams]);
+
+
+  const handleGoogleSignUp = async()=>{
+    dispatch(performGoogleAuth());
+  }
 
   return (
       
@@ -11,6 +31,7 @@ const SignUpPage = () => {
           Enter your details to create your account.
           </p>
           <a
+            onClick={handleGoogleSignUp}
             className="w-4/5 flex items-center justify-center mt-4 text-white rounded-lg shadow-md hover:bg-gray-100 cursor-pointer"
           >
             <div className="px-4 py-3">
