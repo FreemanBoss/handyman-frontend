@@ -1,6 +1,6 @@
 # Project Startup Guide
 
-Welcome to the project! This README provides a comprehensive guide to get you started with the project setup, including how to run the application locally, manage dependencies, and perform common tasks.
+Welcome to the project! This *README* provides a comprehensive guide to get you started with the project setup, including how to run the application locally, manage dependencies, and perform common tasks.
 
 ## Table of Contents
 
