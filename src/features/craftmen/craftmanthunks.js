@@ -1,6 +1,5 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import { registerCraftsmanApi, fetchCraftsmanDetailsApi } from '../../api/craftmenAPI';
-
+import { registerCraftsmanApi, fetchCraftsmanDetailsApi, getAllCraftsmanApi } from '../../api/craftmenAPI';
 
 export const registerCraftsman = createAsyncThunk(
   'craftsman/register',
@@ -17,6 +16,23 @@ export const registerCraftsman = createAsyncThunk(
     }
   }
 );
+
+
+export const fetchCraftsmen = createAsyncThunk(
+  'craftsman/fetchCraftsmen',
+  async ({ pageNumber, pageSize }) => {
+    try{
+
+          const data = await getAllCraftsmanApi(pageNumber, pageSize);
+    return data.data; // Ensure this matches the shape of your API response
+
+    }catch(error){
+      console.log(error)
+    }
+
+  }
+);
+
 
 export const fetchCraftsmanDetails = createAsyncThunk(
   'craftsman/fetchDetails',

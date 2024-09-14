@@ -12,6 +12,7 @@ import useTokenRefresh from "./hooks/useTokenRefresh.js";
 import ProfileContainer from './Pages/profile.page.jsx';
 import Form from "./Components/selectFrom.jsx";
 import AboutUsPage from './Pages/aboutUs.page.jsx'
+import CraftsmenPage from './Pages/CraftsmenPage.jsx';
 
 function App() {
   useTokenRefresh();
@@ -25,6 +26,7 @@ function App() {
         <Route path="/auth/signin" element={<LoginPage />} />
         <Route path="/auth/signup" element={<SignUpPage />} />
         <Route path="/about-us" element={<AboutUsPage />} />
+        <Route path="/craftsmen/:craftsmanId?" element={<CraftsmenPage />} />
         {/* <Route path="/userType" element={<Form/>} />       */}
         {/* This is how you should implement the ProtectedRoute */}
 
@@ -36,7 +38,6 @@ function App() {
             </ProtectedRoute>
           }
         />
-
          <Route
           path="/profile"
           element={

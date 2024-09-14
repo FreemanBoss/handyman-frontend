@@ -73,8 +73,8 @@ const Navbar = () => {
               <a href="/about-us" className="text-base font-medium hover:text-[#ffcc80]">
                 About
               </a>
-              <a href="#" className="text-base font-medium hover:text-[#ffcc80]">
-                Services
+              <a href="/craftsmen" className="text-base font-medium hover:text-[#ffcc80]">
+               Craftsmen
               </a>
               <a href="#" className="text-base font-medium hover:text-[#ffcc80]">
                 Contact
