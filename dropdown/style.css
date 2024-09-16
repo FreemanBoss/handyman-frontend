@@ -1,0 +1,90 @@
+.nav-icons {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.user-icon {
+    width: 40px; /* Adjust size of user image */
+    height: 40px; /* Adjust size of user image */
+    border-radius: 50%; /* Make image circular */
+    object-fit: cover; /* Ensure image covers the circle */
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+.dropdown-menu {
+    display: none; /* Hide menu by default */
+    position: absolute;
+    top: 11%; /* Position below the navbar */
+    right: 2%; /* Align to the right of the navbar */
+    background-color: #3e2723;
+    border: 1px solid #e7aca1;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 250px; /* Adjust width as needed */
+    z-index: 10;
+}
+
+.menu-dialog {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.menu-dialog .menu-item {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: none;
+}
+
+.menu-dialog .menu-item:last-child {
+    border-bottom: 1px solid #8b8787;
+}
+.menu-dialog .menu-item:nth-child(2) {
+    border-bottom: 1px solid #8b8787;
+}
+
+.menu-dialog .menu-item i {
+    font-size: 20px;
+    color: #f3d0b3;
+}
+
+.menu-dialog p {
+    margin: 0;
+    color: #f3d0b3;
+}
+.menu-dialog a{
+    text-decoration: none;
+    margin: 0;
+    color: #f3d0b3;
+}
+
+.title{
+    padding: 15px;
+}
+.members-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px;
+}
+
+.member-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.member-item img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.menu-item_info {
+    display: flex;
+    flex-direction: column;
+}

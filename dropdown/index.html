@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <!-- Navbar Section -->
+<div class="nav-icons nav-links">
+    <a href="#" class="search-icon">🔍</a>
+    <a href="#" class="cart-icon">🛒</a>
+    <img src="images/1000561296.jpg" alt="user" class="user-icon" onclick="toggleMenu()">
+</div>
+
+<!-- Dropdown Menu Section -->
+<div class="dropdown-menu" id="dropdownMenu">
+    <!-- Menu Section -->
+    <div class="menu-dialog">
+        <div class="menu-item">
+            <ion-icon  name="person-outline"></ion-icon>
+            <a href="profilepage.html">My Profile</a>
+        </div>
+        <div class="menu-item">
+            <ion-icon name="settings-outline"></ion-icon>
+            <p>Global Settings</p>
+        </div>
+        <div class="menu-item">
+            <ion-icon class="i" name="code-working-outline"></ion-icon>
+            <p>Products</p>
+        </div>
+        <div class="menu-item">
+            <ion-icon name="log-out-outline"></ion-icon>
+            <p>Logout</p>
+        </div>
+    </div>
+
+    <!-- Team Members Section -->
+    <span class="title">Team Members</span>
+    <div class="members-list">
+        <div class="member-item">
+            <img src="images/1000561302.jpg" alt="">
+            <div class="menu-item_info">
+                <span class="name">John Doe</span>
+                <span class="email">john.doe@example.com</span>
+            </div>
+        </div>
+        <div class="member-item">
+            <img src="images/1000561303.jpg" alt="">
+            <div class="menu-item_info">
+                <span class="name">Mary Jane</span>
+                <span class="email">mary.jane@example.com</span>
+            </div>
+        </div>
+        <div class="member-item">
+            <img src="images/1000561295.jpg" alt="">
+            <div class="menu-item_info">
+                <span class="name">Mira Frey</span>
+                <span class="email">mira.frey@example.com</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    function toggleMenu() {
+const dropdownMenu = document.getElementById('dropdownMenu');
+if (dropdownMenu.style.display === 'block') {
+    dropdownMenu.style.display = 'none';
+} else {
+    // Hide all other dropdown menus if any
+    document.querySelectorAll('.dropdown-menu').forEach(menu => {
+        menu.style.display = 'none';
+    });
+    dropdownMenu.style.display = 'block';
+}
+}
+
+// Close the dropdown when clicking outside of it
+document.addEventListener('click', function(event) {
+const isClickInside = event.target.closest('.nav-icons');
+if (!isClickInside) {
+    document.querySelectorAll('.dropdown-menu').forEach(menu => {
+        menu.style.display = 'none';
+    });
+}
+});
+</script>
+</body>
+</html>
