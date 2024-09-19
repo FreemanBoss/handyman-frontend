@@ -1,3 +1,8 @@
+# [HANDYMAN](https://handyman-frontend-gold.vercel.app/)
+
+Handyman is a web, later a mobile application, designed to connect users with local craftsmen for various household chores. Users can book electricians, plumbers, and other
+craftsmen to assist with their home maintenance needs. The app aims to provide a seamless and efficient way to get reliable help for everyday tasks.
+
 # Project Startup Guide
 
 Welcome to the project! This *README* provides a comprehensive guide to get you started with the project setup, including how to run the application locally, manage dependencies, and perform common tasks.
@@ -33,11 +38,30 @@ Make sure you have all necessary dependencies installed.
 
 npm install
 ```
-3. - To run the project on the development server 
+
+## Running the Project
+1. - To run the project on the development server 
 ```
+
 npm run dev
 ```
+2. - To run the project on the staging server
+```
+
+npm run staging
+```
+3. - To run the project on the production server
+```
+
+npm run prod
+```
+
+
 
 
 ### Contributing
-We welcome contributions to the project! Please refer to our CONTRIBUTING.md file for guidelines on how to contribute.
+We welcome contributions to the project! Please refer to our [CONTRIBUTING.md](./CONTRIBUTING.md) file for guidelines on how to contribute.
+
+## License
+
+By contributing, you agree that your contributions will be licensed under the [Apache License](LICENSE).
