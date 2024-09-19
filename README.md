@@ -17,7 +17,7 @@ Welcome to the project! This *README* provides a comprehensive guide to get you 
 
 Before you begin, ensure you have the following installed:
 
-- [Node.js](https://nodejs.org/) (v14.x or later)
+- [Node.js](https://nodejs.org/en) (v14.x or later)
 - [npm](https://www.npmjs.com/) (comes with Node.js) or [Yarn](https://yarnpkg.com/) (optional, but recommended)
 
 ## Setup
@@ -25,7 +25,7 @@ Before you begin, ensure you have the following installed:
 1. **Clone the Repository**
 
    ```   
-   git clone https://github.com/FreemanBoss/handyman-frontend.git
+   git clone https://github.com/FreemanBoss/handyman-frontend
    cd handyman-frontend
    ```
 2. Install Dependencies
