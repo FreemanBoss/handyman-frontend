@@ -31,25 +31,35 @@ const LoginForm = () => {
   });
 
 
-  
 
-  const onSubmit = async(data) => {
-    console.log(data);
-    try{
-      await dispatch(performLogin(data));
+  const onSubmit = async (data) => {
+   try {
+    // Use unwrap to get the resolved value from the thunk
+    const user = await dispatch(performLogin(data)).unwrap();
+
+    console.log('User object in onSubmit:', user);
+
+    // Check for hasCompletedInitialSetup
+    if (user.hasCompletedInitialSetup === false) {
+      navigate('/userType');
       toast.success(LOGIN_SUCCESSFUL, {
         position: "top-right",
         autoClose: 2000,
       });
-       setTimeout(() => {
+    } else {
+      toast.success(LOGIN_SUCCESSFUL, {
+        position: "top-right",
+        autoClose: 2000,
+      });
+
+      setTimeout(() => {
         navigate('/');
-      }, 2000);      
-    }catch(error){
-      toast.error(error.message || LOGIN_FAILED);
+      }, 2000);
     }
-  };
-
-
+  } catch (error) {
+    toast.error(error.message || LOGIN_FAILED);
+  }
+};
 
 
   return (

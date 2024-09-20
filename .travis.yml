@@ -1,0 +1,25 @@
+language: ruby
+rvm:
+  - 3.2.2  # Updated Ruby version
+
+# Cache dependencies to speed up builds
+cache: 
+  bundler: true
+  directories:
+    - vendor/bundle
+
+# Install required gems
+before_script:
+  - gem install awesome_bot  # Install awesome_bot gem to check links in README
+
+script:
+  # Check for broken links in README.md (no whitelist)
+  - awesome_bot README.md
+
+# Notifications to receive build status updates (optional)
+notifications:
+  email:
+    recipients:
+      - habeebbabasulaiman@gmail.com
+    on_success: never  # don't notify on successful build
+    on_failure: always # notify on failed build
