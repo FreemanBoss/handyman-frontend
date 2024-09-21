@@ -7,7 +7,7 @@ const Contact = () => {
   {/* Contact Section */}
   <div className="mt-16 bg-[#3e2723]  text-white py-16">
     <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center px-4">
-      <div>
+      <div data-aos='fade-right'>
         <h2 className="text-sm font-semibold uppercase tracking-wide">
           Get In Touch
         </h2>
@@ -25,6 +25,7 @@ const Contact = () => {
         className="w-full h-64 object-cover"
         src="../../src/assets/images/cleaning1.jpg"
         alt="Technician at Work"
+        data-aos='fade-left'
       />
     </div>
   </div>

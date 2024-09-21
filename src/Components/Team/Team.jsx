@@ -29,6 +29,7 @@ const Team = () => {
             className="w-40 h-40 rounded-full object-cover"
             src="../src/assets/images/team1.jpg"
             alt="Team Member 1"
+            data-aos='zoom-in'
           />
           <p className="mt-4 text-lg font-bold">Jason Kurlan</p>
           <p className="text-sm text-gray-500">Handyman</p>
@@ -38,6 +39,7 @@ const Team = () => {
             className="w-40 h-40 rounded-full object-cover"
             src="../src/assets/images/team.jpg"
             alt="Team Member 2"
+            data-aos='zoom-in'
           />
           <p className="mt-4 text-lg font-bold">Kevin Martin</p>
           <p className="text-sm text-gray-500">Handyman</p>
@@ -47,6 +49,7 @@ const Team = () => {
             className="w-40 h-40 rounded-full object-cover"
             src="../src/assets/images/team3.jpg"
             alt="Team Member 3"
+            data-aos='zoom-in'
           />
           <p className="mt-4 text-lg font-bold">Noper Mick</p>
           <p className="text-sm text-gray-500">Handyman</p>

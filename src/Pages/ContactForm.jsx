@@ -60,7 +60,7 @@ const ContactForm = () => {
                 type="text"
                 id="name"
                 placeholder="Your name"
-                className="ring-1 ring-gray-300 w-full rounded-md px-4 py-2 mt-2 outline-none focus:ring-2 focus:ring-[#ffcc80]"
+                className="ring-1 ring-gray-300 w-full rounded-md px-4 py-2 mt-2 outline-none focus:ring-2 focus:ring-[#bca07d]"
               />
             </div>
             <div>
@@ -71,7 +71,7 @@ const ContactForm = () => {
                 type="email"
                 id="email"
                 placeholder="Email Address"
-                className="ring-1 ring-gray-300 w-full rounded-md px-4 py-2 mt-2 outline-none focus:ring-2 focus:ring-[#ffcc80]"
+                className="ring-1 ring-gray-300 w-full rounded-md px-4 py-2 mt-2 outline-none focus:ring-2 focus:ring-[#bca07d]"
               />
             </div>
             <div>
@@ -82,7 +82,7 @@ const ContactForm = () => {
                 id="message"
                 rows={4}
                 placeholder="Leave us a message"
-                className="ring-1 ring-gray-300 w-full rounded-md px-4 py-2 mt-2 outline-none focus:ring-2 focus:ring-[#ffcc80]"
+                className="ring-1 ring-gray-300 w-full rounded-md px-4 py-2 mt-2 outline-none focus:ring-2 focus:ring-[#bca07d]"
                 defaultValue={""}
               />
             </div>

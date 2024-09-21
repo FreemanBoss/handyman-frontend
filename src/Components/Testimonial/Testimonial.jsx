@@ -26,6 +26,7 @@ const Testimonial = () => {
             className="w-24 h-24 rounded-full"
             src={Customer}
             alt="Customer"
+            data-aos='zoom-in'
           />
           <p className="mt-4 text-lg font-medium">Rene Harmon</p>
           <p className="text-sm">Satisfied Customer</p>

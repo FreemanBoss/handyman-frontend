@@ -13,12 +13,12 @@ const NewsLetter = () => {
       <input
         type="email"
         placeholder="Enter your email"
-        className="w-full sm:w-auto px-4 py-2 rounded-md border border-gray-300 text-gray-700 focus:outline-none focus:ring-2 focus:ring-yellow-500"
+        className="w-1/2 sm:w-auto px-4 py-2 rounded-md border border-gray-300 text-gray-700 focus:outline-none focus:ring-2 focus:ring-yellow-500"
         required=""
       />
       <button
         type="submit"
-        className="w-full sm:w-auto px-6 py-2 bg-yellow-500 text-white font-semibold rounded-md hover:bg-yellow-600 transition-colors duration-300"
+        className=" sm:w-auto px-6 py-2 bg-yellow-500 text-white font-semibold rounded-md hover:bg-yellow-600 transition-colors duration-300"
       >
         Subscribe
       </button>
