@@ -13,11 +13,11 @@ const HomePage = () => {
   return (
     <>
    
-      <section id="hero">
+      <section>
         <Hero />
       </section>
 
-      <section id="services">
+      <section>
         <Services />
       </section>
 

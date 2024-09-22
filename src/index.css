@@ -31,6 +31,7 @@
 
 }
 
+
 /* Custom classes for checkbox toggle effect */
 input[type="checkbox"]:checked ~ .login {
   transform: translateY(5px);
@@ -164,3 +165,8 @@ input[type="checkbox"]:checked ~ .signup label {
 .card-pop-up {
   animation: enhancedFadeInSlideUp 1s ease-out forwards;
 }
+
+html, body {
+  overflow-x: hidden;
+}
+
