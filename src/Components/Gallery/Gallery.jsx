@@ -10,7 +10,7 @@ const Gallery = () => {
       <div className="flex-none w-1/2 md:w-1/4">
         <img
           className="w-full h-48 object-contain"
-          src="../src/assets/images/cleaning_img.jpg"
+          src="../../../images/cleaning_img.jpg"
           alt="Image 1"
           data-aos='zoom-in'
         />
@@ -18,7 +18,7 @@ const Gallery = () => {
       <div className="flex-none w-1/2 md:w-1/4">
         <img
           className="w-full h-48 object-contain"
-          src="../src/assets/images/plumbing.jpg"
+          src="../../../images/plumbing.jpg"
           alt="Image 2"
           data-aos='zoom-in'
         />
@@ -26,7 +26,7 @@ const Gallery = () => {
       <div className="flex-none w-1/2 md:w-1/4">
         <img
           className="w-full h-48 object-contain"
-          src="../src/assets/images/cleaning4.jpg"
+          src="../../../images/cleaning4.jpg"
           alt="Image 3"
           data-aos='zoom-in'
         />
@@ -34,7 +34,7 @@ const Gallery = () => {
       <div className="flex-none w-1/2 md:w-1/4">
         <img
           className="w-full h-48 object-contain"
-          src="../src/assets/images/AirConditioning.jpg"
+          src="../../../images/AirConditioning.jpg"
           alt="Image 4"
           data-aos='zoom-in'
         />
@@ -44,7 +44,7 @@ const Gallery = () => {
       <div className="flex-none w-1/2 md:w-1/4">
         <img
           className="w-full h-48 object-contain"
-          src="../src/assets/images/cleaning_img.jpg"
+          src="../../../images/cleaning_img.jpg"
           alt="Image 1"
           data-aos='zoom-in'
         />
@@ -52,7 +52,7 @@ const Gallery = () => {
       <div className="flex-none w-1/2 md:w-1/4">
         <img
           className="w-full h-48 object-contain"
-          src="../src/assets/images/plumbing.jpg"
+          src="../../../images/plumbing.jpg"
           alt="Image 2"
           data-aos='zoom-in'
         />
@@ -60,7 +60,7 @@ const Gallery = () => {
       <div className="flex-none w-1/2 md:w-1/4">
         <img
           className="w-full h-48 object-contain"
-          src="../src/assets/images/cleaning4.jpg"
+          src="../../../images/cleaning4.jpg"
           alt="Image 3"
           data-aos='zoom-in'
         />
@@ -68,7 +68,7 @@ const Gallery = () => {
       <div className="flex-none w-1/2 md:w-1/4">
         <img
           className="w-full h-48 object-contain"
-          src="../src/assets/images/AirConditioning.jpg"
+          src="../../../images/AirConditioning.jpg"
           alt="Image 4"
           data-aos='zoom-in'
         />

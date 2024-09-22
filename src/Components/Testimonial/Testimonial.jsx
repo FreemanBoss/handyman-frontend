@@ -1,5 +1,5 @@
 
-import Customer from '../../assets/images/team.jpg'
+import Customer from '../../../public/images/team.jpg'
 
 const Testimonial = () => {
   return (
