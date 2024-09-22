@@ -5,7 +5,7 @@ const Hero = ()=> {
   return(
   <>
   {/* Header Section */}
-  <header className=" relative bg-[url('../../../images/Hero.jpg')] bg-cover bg-center h-screen">
+  <header className=" relative bg-[url('../../../images/Hero.jpg')] bg-cover bg-center h-screen mt-10">
     <div className="absolute inset-0 bg-black opacity-60" />
     {/* Darker overlay */}
     <div className=" header-text container mx-auto px-6 py-2 text-center relative top-1/2" data-aos='zoom-in'>

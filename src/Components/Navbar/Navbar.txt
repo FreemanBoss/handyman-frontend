@@ -33,13 +33,13 @@ const Navbar = () => {
   return (
     <>
       {/* NAVBAR SECTION */}
-      <nav className="bg-[#3e2723] text-white fixed top-0 left-0 w-full z-50" data-aos='fade-down'>
+      <nav className="bg-[#3e2723] text-white fixed top-0 left-0 w-full z-50">
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex justify-between items-center py-4">
             {/* Logo */}
             <div className="flex-shrink-0">
-              <a href="/" className="text-4xl text-[#ffcc80] font-bold" data-aos='fade-right'>
-                Logo
+              <a href="#" className="text-4xl text-[#ffcc80] font-bold">
+                HANDYMAN
               </a>
             </div>
             {/* Hamburger Icon (for mobile) */}
@@ -65,7 +65,6 @@ const Navbar = () => {
                 </svg>
               </button>
             </div>
-
             {/* Navigation Links (for larger screens) */}
             <div className="hidden md:flex items-center space-x-8">
               <Link to="/" className="text-base font-medium hover:text-[#ffcc80]">
@@ -77,10 +76,9 @@ const Navbar = () => {
               <a href="#" className="text-base font-medium hover:text-[#ffcc80]">
                 Services
               </a>
-              <a href="/contactform" className="text-base font-medium hover:text-[#ffcc80]">
+              <a href="#" className="text-base font-medium hover:text-[#ffcc80]">
                 Contact
               </a>
-
               {/* Conditional Rendering of Avatar and Auth Links */}
               {isAuthenticated ? (
                 <div className="relative group">
@@ -121,7 +119,7 @@ const Navbar = () => {
                 </div>
               ) : (
                 <>
-                  <Link to="/auth/signin" className="text-base font-medium hover:text-[#ffcc80] ">
+                  <Link to="/auth/signin" className="text-base font-medium hover:text-[#ffcc80] mt-2">
                     Sign In
                   </Link>
                   <Link
@@ -140,7 +138,7 @@ const Navbar = () => {
           id="mobile-menu"
           className={`md:hidden bg-[#3e2723] px-4 py-4 space-y-2 ${isMobileMenuOpen ? 'block' : 'hidden'}`}
         >
-          <a href="/" className="block text-base font-medium hover:text-[#ffcc80]">
+          <a href="#" className="block text-base font-medium hover:text-[#ffcc80]">
             Home
           </a>
           <a href="/about-us" className="block text-base font-medium hover:text-[#ffcc80]">
@@ -149,7 +147,7 @@ const Navbar = () => {
           <a href="#" className="block text-base font-medium hover:text-[#ffcc80]">
             Services
           </a>
-          <a href="/contactform" className="block text-base font-medium hover:text-[#ffcc80]">
+          <a href="#" className="block text-base font-medium hover:text-[#ffcc80]">
             Contact
           </a>
           {isAuthenticated ? (
