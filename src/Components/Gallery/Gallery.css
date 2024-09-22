@@ -16,7 +16,7 @@
   /* Animate the images */
   .animate-scroll {
     display: flex;
-    width: 100%; /* Adjust based on the number of images */
+    width: 90%; /* Adjust based on the number of images */
     animation: scroll 20s linear infinite;
   }
   
