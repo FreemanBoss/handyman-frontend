@@ -1,5 +1,4 @@
 
-import Customer from '../../../public/images/team.jpg'
 
 const Testimonial = () => {
   return (
@@ -24,7 +23,7 @@ const Testimonial = () => {
         <div className="mt-6 flex flex-col items-center">
           <img
             className="w-24 h-24 rounded-full"
-            src={Customer}
+            src="../../../images/team.jpg"
             alt="Customer"
             data-aos='zoom-in'
           />
