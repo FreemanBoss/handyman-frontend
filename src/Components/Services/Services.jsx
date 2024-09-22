@@ -14,7 +14,7 @@ const Services = () => {
       </h2>
       <div className="mt-10 flex flex-wrap justify-center gap-10">
         <div className="w-full sm:w-1/3 p-4" data-aos="fade-up" data-aos-duration={1000} >
-          <img src="../src/assets/images/clean.jpg" alt="Cleaning Services" className="w-full h-auto rounded-lg" />
+          <img src="../../../images/clean.jpg" alt="Cleaning Services" className="w-full h-auto rounded-lg" />
           <h3 className="mt-4 text-center text-xl font-semibold text-[#3e2723]">
             Cleaning Services
           </h3>
@@ -22,7 +22,7 @@ const Services = () => {
 
         <div className="w-full sm:w-1/3 p-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" >
           <img
-            src="../src/assets/images/AirConditioning.jpg"
+            src="../../../images/AirConditioning.jpg"
             alt="Air Conditioning"
             className="w-full h-auto rounded-lg"
           />
@@ -38,7 +38,7 @@ const Services = () => {
           data-aos-delay="400"
         >
           <img
-            src="../src/assets/images/plumbing.jpg"
+            src="../../../images/plumbing.jpg"
             alt="Plumbing Services"
             className="w-full h-auto rounded-lg"
           />

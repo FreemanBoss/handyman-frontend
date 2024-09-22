@@ -34,7 +34,7 @@ const features = ()=> {
       <div className="md:w-1/2 flex justify-center" data-aos="fade-left">
         <div className="relative">
           <img
-            src="../src/assets/images/plumbing-professional.jpg"
+            src="../../../images/plumbing-professional.jpg"
             alt="Repair Worker"
             className="rounded-lg shadow-lg"
           />
