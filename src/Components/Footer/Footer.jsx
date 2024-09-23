@@ -57,32 +57,6 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        {/* Shop */}
-        <div>
-          <h3 className="text-[#ffcc80] font-bold mb-4">Shop</h3>
-          <ul className="space-y-2">
-            <li>
-              <a href="#" className="text-[#ffcc80] hover:underline">
-                Men
-              </a>
-            </li>
-            <li>
-              <a href="#" className="text-[#ffcc80] hover:underline">
-                Women
-              </a>
-            </li>
-            <li>
-              <a href="#" className="text-[#ffcc80] hover:underline">
-                Children
-              </a>
-            </li>
-            <li>
-              <a href="#" className="text-[#ffcc80] hover:underline">
-                Shoes
-              </a>
-            </li>
-          </ul>
-        </div>
         {/* Contact Us */}
         <div>
           <h3 className="text-[#ffcc80] font-bold mb-4">Contact Us</h3>

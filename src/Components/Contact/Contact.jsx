@@ -19,7 +19,7 @@ const Contact = () => {
       </div>
       <img
         className="w-full h-64 object-cover"
-        src="../../src/assets/images/cleaning1.jpg"
+        src="/images/cleaning1.jpg"
         alt="Technician at Work"
       />
     </div>

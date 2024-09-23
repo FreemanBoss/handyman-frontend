@@ -20,7 +20,7 @@ const Services = () => {
           data-aos-duration={1000}
         >
           <img
-            src="../src/assets/images/clean.jpg"
+            src="/images/clean.jpg"
             alt="Emergency Services"
             className="w-full h-auto rounded-lg"
           />
@@ -35,7 +35,7 @@ const Services = () => {
           data-aos-delay={200}
         >
           <img
-            src="../src/assets/images/AirConditioning.jpg"
+            src="/images/AirConditioning.jpg"
             alt="Air Conditioning"
             className="w-full h-auto rounded-lg"
           />
@@ -50,7 +50,7 @@ const Services = () => {
           data-aos-delay={400}
         >
           <img
-            src="../src/assets/images/plumbing.jpg"
+            src="/images/plumbing.jpg"
             alt="Plumbing Services"
             className="w-full h-auto rounded-lg"
           />
