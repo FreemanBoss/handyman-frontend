@@ -196,7 +196,7 @@ const Navbar = () => {
               </a>
               <a
                 href="/auth/signup"
-                className="block px-4 py-2 bg-[#ffcc80] text-white rounded-md font-medium hover:bg-[#3e2723]"
+                className="block px-1 py-2 bg-[#ffcc80] text-white rounded-md font-medium hover:bg-[#3e2723]"
               >
                 Sign Up
               </a>

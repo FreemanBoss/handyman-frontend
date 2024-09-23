@@ -5,7 +5,7 @@ const ContactForm = () => {
     <>
   {/* contact section */}
   <div className="flex w-full min-h-screen justify-center items-center">
-    <div className="m-24 flex flex-col md:flex-row md:space-x-6 space-y-6 md:space-y-0 bg-[#3e2723] w-full max-w-6xl p-8 sm:p-12 rounded-xl shadow-lg text-white overflow-hidden">
+    <div className="my-24 mx-5 flex flex-col md:flex-row md:space-x-6 space-y-6 md:space-y-0 bg-[#3e2723] w-full max-w-6xl p-8 sm:p-12 rounded-xl shadow-lg text-white overflow-hidden">
       <div className="flex flex-col space-y-8 justify-between md:w-1/2">
         <div>
           <h1 className="font-bold text-4xl tracking-wide">

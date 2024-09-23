@@ -49,9 +49,9 @@ const AboutUsPage = () => {
       {/* Hero Section */}
       <section
         className="relative h-screen bg-cover bg-center fade-in-slow"
-        style={{ backgroundImage: 'url(/public/images/clean.jpg)' }}
+        style={{ backgroundImage: 'url(../../images/clean.jpg)'}}
       >
-        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+        <div className="absolute inset-0 bg-black opacity-60" />
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4">
           <h1
             ref={heroTitleRef}

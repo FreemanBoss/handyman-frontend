@@ -19,6 +19,12 @@
     width: 90%; /* Adjust based on the number of images */
     animation: scroll 20s linear infinite;
   }
+
+  @media screen and (max-width: 768px) {
+    .animate-scroll {
+      width: 160%; /* Adjust container width for smaller screens */
+    }
+  }
   
   /* Each image container */
   .flex-none {

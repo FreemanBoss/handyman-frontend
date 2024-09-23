@@ -25,7 +25,7 @@ const SignUpPage = () => {
   return (
       
     <div className="min-h-[90%] flex justify-center items-center">
-      <div className="w-full max-w-screen-lg bg-gray-50 m-24 shadow-xl rounded-2xl flex justify-between items-center max-sm:flex-col max-sm:w-full">
+      <div className="w-full max-w-screen-lg bg-gray-50 mx-5 my-24 shadow-xl rounded-2xl flex justify-between items-center max-sm:flex-col max-sm:w-full">
         <div className="w-1/2 max-sm:w-full flex flex-col py-4 items-center gap-5">
           <p className="text-sm font-normal text-gray-500">
           Enter your details to create your account.
@@ -57,7 +57,7 @@ const SignUpPage = () => {
         <div className="w-1/2 max-sm:w-full h-[600px] max-sm:h-[400px] flex items-center self-end max-sm:self-center bg-gradient-to-t from-[#ffcc80] to-[#bca07d] rounded-2xl m-4 overflow-hidden">
           <img
             src='../../images/Hero.jpg'
-            alt="bike"
+            alt="Cleaner"
             className="w-full h-full object-cover"
           />
         </div>
