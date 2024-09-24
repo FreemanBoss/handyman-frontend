@@ -21,6 +21,7 @@ const Services = () => {
         >
           <img
             src="/images/clean.jpg"
+            loading="lazy"
             alt="Emergency Services"
             className="w-full h-auto rounded-lg"
           />
@@ -36,6 +37,7 @@ const Services = () => {
         >
           <img
             src="/images/AirConditioning.jpg"
+            loading="lazy"
             alt="Air Conditioning"
             className="w-full h-auto rounded-lg"
           />
@@ -51,6 +53,7 @@ const Services = () => {
         >
           <img
             src="/images/plumbing.jpg"
+            loading="lazy"
             alt="Plumbing Services"
             className="w-full h-auto rounded-lg"
           />
