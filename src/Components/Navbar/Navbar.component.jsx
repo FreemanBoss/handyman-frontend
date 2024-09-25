@@ -138,14 +138,14 @@ const Navbar = () => {
           id="mobile-menu"
           className={`md:hidden bg-[#3e2723] px-4 py-4 space-y-2 ${isMobileMenuOpen ? 'block' : 'hidden'}`}
         >
-          <a href="#" className="block text-base font-medium hover:text-[#ffcc80]">
+          <a href="/" className="block text-base font-medium hover:text-[#ffcc80]">
             Home
           </a>
           <a href="/about-us" className="block text-base font-medium hover:text-[#ffcc80]">
             About
           </a>
-          <a href="#" className="block text-base font-medium hover:text-[#ffcc80]">
-            Services
+          <a href="/craftsmen" className="block text-base font-medium hover:text-[#ffcc80]">
+          Craftsmen
           </a>
           <a href="#" className="block text-base font-medium hover:text-[#ffcc80]">
             Contact
