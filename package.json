@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "lint": "cross-env eslint 'src//*.{js,jsx}'",
+    "lint": "cross-env eslint 'src/**/*.{js,jsx}'",
     "postinstall": "husky install",
     "lint:fix": "eslint . --ext .js,.jsx --fix",
     "commitlint": "commitlint --from=HEAD~1 --to=HEAD"
