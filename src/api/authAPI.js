@@ -46,7 +46,7 @@ export const refreshToken = async () => {
 };
 export const googleAuth = async() =>{
  try {
-    window.location.href = 'http://localhost:5000/api/v1/auth/google'; 
+    window.location.href = 'https://handyman-backend-c1ri.onrender.com/api/v1/auth/google'; 
   } catch (error) {
     console.error('Google OAuth initiation failed:', error);
     throw error;
