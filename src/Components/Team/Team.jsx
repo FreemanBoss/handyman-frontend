@@ -28,7 +28,7 @@ const Team = () => {
         <div className="flex flex-col items-center">
           <img
             className="w-40 h-40 rounded-full object-cover"
-            src="../src/assets/images/team1.jpg"
+            src="/images/team1.jpg"
             alt="Team Member 1"
           />
           <p className="mt-4 text-lg font-bold">Jason Kurlan</p>
@@ -37,7 +37,7 @@ const Team = () => {
         <div className="flex flex-col items-center">
           <img
             className="w-40 h-40 rounded-full object-cover"
-            src="../src/assets/images/team.jpg"
+            src="/images/team.jpg"
             alt="Team Member 2"
           />
           <p className="mt-4 text-lg font-bold">Kevin Martin</p>
@@ -46,7 +46,7 @@ const Team = () => {
         <div className="flex flex-col items-center">
           <img
             className="w-40 h-40 rounded-full object-cover"
-            src="../src/assets/images/team3.jpg"
+            src="/images/team3.jpg"
             alt="Team Member 3"
           />
           <p className="mt-4 text-lg font-bold">Noper Mick</p>

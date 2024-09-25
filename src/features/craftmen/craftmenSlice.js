@@ -1,8 +1,13 @@
+
 import { createSlice } from '@reduxjs/toolkit';
-import { registerCraftsman, fetchCraftsmanDetails } from './craftmanthunks'; // Ensure this path is correct
+import { registerCraftsman, fetchCraftsmanDetails, fetchCraftsmen } from './craftmanthunks';
 
 const initialState = {
   craftsman: null,
+  craftsmen: [], // Array for storing multiple craftsmen
+  pageNumber: 1,
+  pageSize: 10,
+  totalItems: 0,
   isLoading: false,
   error: null,
   success: false,
@@ -14,14 +19,24 @@ const craftsmanSlice = createSlice({
   reducers: {
     clearCraftsmanState: (state) => {
       state.craftsman = null;
+      state.craftsmen = [];
       state.isLoading = false;
       state.error = null;
       state.success = false;
       localStorage.removeItem('craftsman');
     },
-     setCraftsmanData: (state, action) => {
+    setCraftsmanData: (state, action) => {
       state.craftsman = action.payload;
       state.success = true;
+    },
+    setPageNumber: (state, action) => {
+      state.pageNumber = action.payload;
+    },
+    setPageSize: (state, action) => {
+      state.pageSize = action.payload;
+    },
+    setTotalItems: (state, action) => {
+      state.totalItems = action.payload;
     }
   },
   extraReducers: (builder) => {
@@ -33,7 +48,7 @@ const craftsmanSlice = createSlice({
       .addCase(registerCraftsman.fulfilled, (state, action) => {
         state.isLoading = false;
         state.success = true;
-        state.craftsman = action.payload; // Now only the data object
+        state.craftsman = action.payload;
       })
       .addCase(registerCraftsman.rejected, (state, action) => {
         state.isLoading = false;
@@ -45,15 +60,28 @@ const craftsmanSlice = createSlice({
       })
       .addCase(fetchCraftsmanDetails.fulfilled, (state, action) => {
         state.isLoading = false;
-        state.craftsman = action.payload; // Ensure payload matches expected data structure
+        state.craftsman = action.payload;
       })
       .addCase(fetchCraftsmanDetails.rejected, (state, action) => {
         state.isLoading = false;
         state.error = action.payload || 'Failed to fetch craftsman details';
+      })
+      .addCase(fetchCraftsmen.pending, (state) => {
+        state.isLoading = true;
+        state.error = null;
+      })
+      .addCase(fetchCraftsmen.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.craftsmen = action.payload.items; // Adjust based on your API response
+        state.totalItems = action.payload.totalItems;
+      })
+      .addCase(fetchCraftsmen.rejected, (state, action) => {
+        state.isLoading = false;
+        state.error = action.payload || 'Failed to fetch craftsmen';
       });
   },
 });
 
-export const { clearCraftsmanState, setCraftsmanData } = craftsmanSlice.actions;
+export const { clearCraftsmanState, setCraftsmanData, setPageNumber, setPageSize, setTotalItems } = craftsmanSlice.actions;
 
 export default craftsmanSlice.reducer;

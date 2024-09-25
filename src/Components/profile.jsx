@@ -1,100 +1,190 @@
 import { useState } from 'react';
-import { FaEdit, FaSave, FaTimes } from 'react-icons/fa';
+import { UserIcon, EnvelopeIcon, PhoneIcon, MapPinIcon, LockClosedIcon, XMarkIcon, CheckIcon } from '@heroicons/react/24/outline';
+
+
 
 const ProfilePage = () => {
-  const [isEditing, setIsEditing] = useState(false);
-  const [userInfo, setUserInfo] = useState({
-    name: 'John Doe',
-    email: 'john.doe@example.com',
-    phone: '+1234567890',
-    bio: 'Software developer with a passion for technology and coding.',
+  const [formData, setFormData] = useState({
+    firstName: 'Mehrab',
+    lastName: 'Bozorgi',
+    email: 'mehrabbozorgi.business@gmail.com',
+    address: '33062 Zboncak isle',
+    contactNumber: '58077.79',
+    city: 'Mehrab',
+    state: 'Bozorgi',
+    password: '',
   });
 
-  const handleEditClick = () => {
-    setIsEditing(true);
-  };
-
-  const handleSaveClick = () => {
-    // Save user info (API call can be implemented here)
-    setIsEditing(false);
-  };
-
-  const handleCancelClick = () => {
-    // Reset changes if needed
-    setIsEditing(false);
-  };
-
   const handleChange = (e) => {
-    setUserInfo({ ...userInfo, [e.target.name]: e.target.value });
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(formData);
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 py-6 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-4xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
-        <div className="relative">
-          <div className="absolute top-0 left-0 w-full h-32 bg-gray-800"></div>
-          <div className="relative flex items-center justify-center mt-16">
-            <img
-              src="/images/avatar.png" // Replace with your image path
-              alt="Profile Avatar"
-              className="w-32 h-32 rounded-full border-4 border-white"
-            />
+    <>
+    <div className="flex justify-center items-center  min-h-screen bg-gradient-to-r from-blue-50 to-indigo-50">
+      <form
+        onSubmit={handleSubmit}
+        className="w-full max-w-4xl p-8 bg-white shadow-xl rounded-lg border border-gray-200"
+      >
+        <div className="text-center mb-8">
+          <img
+            className="w-16 h-16 rounded-full mx-auto"
+            src="https://via.placeholder.com/150"
+            alt="Profile"
+          />
+          <h2 className="text-2xl font-semibold text-gray-700 mt-4 tracking-wide">
+            Edit Profile
+          </h2>
+        </div>
+
+        {/* Grid Layout - 2 Columns on md and up */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* First Name */}
+          <div className="flex flex-col">
+            <label className="text-sm font-medium text-gray-500">First Name</label>
+            <div className="relative mt-1">
+              <UserIcon className="w-5 h-5 text-gray-400 absolute top-1/2 transform -translate-y-1/2 left-3" />
+              <input
+                type="text"
+                name="firstName"
+                value={formData.firstName}
+                onChange={handleChange}
+                className="pl-10 pr-4 py-2 w-full border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-300 focus:outline-none transition-all duration-150 ease-in-out"
+              />
+            </div>
+          </div>
+
+          {/* Last Name */}
+          <div className="flex flex-col">
+            <label className="text-sm font-medium text-gray-500">Last Name</label>
+            <div className="relative mt-1">
+              <UserIcon className="w-5 h-5 text-gray-400 absolute top-1/2 transform -translate-y-1/2 left-3" />
+              <input
+                type="text"
+                name="lastName"
+                value={formData.lastName}
+                onChange={handleChange}
+                className="pl-10 pr-4 py-2 w-full border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-300 focus:outline-none transition-all duration-150 ease-in-out"
+              />
+            </div>
+          </div>
+
+          {/* Email */}
+          <div className="flex flex-col">
+            <label className="text-sm font-medium text-gray-500">Email</label>
+            <div className="relative mt-1">
+              <EnvelopeIcon className="w-5 h-5 text-gray-400 absolute top-1/2 transform -translate-y-1/2 left-3" />
+              <input
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                className="pl-10 pr-4 py-2 w-full border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-300 focus:outline-none transition-all duration-150 ease-in-out"
+              />
+            </div>
+          </div>
+
+          {/* Contact Number */}
+          <div className="flex flex-col">
+            <label className="text-sm font-medium text-gray-500">Contact Number</label>
+            <div className="relative mt-1">
+              <PhoneIcon className="w-5 h-5 text-gray-400 absolute top-1/2 transform -translate-y-1/2 left-3" />
+              <input
+                type="text"
+                name="contactNumber"
+                value={formData.contactNumber}
+                onChange={handleChange}
+                className="pl-10 pr-4 py-2 w-full border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-300 focus:outline-none transition-all duration-150 ease-in-out"
+              />
+            </div>
+          </div>
+
+          {/* Address */}
+          <div className="flex flex-col md:col-span-2">
+            <label className="text-sm font-medium text-gray-500">Address</label>
+            <div className="relative mt-1">
+              <MapPinIcon className="w-5 h-5 text-gray-400 absolute top-1/2 transform -translate-y-1/2 left-3" />
+              <input
+                type="text"
+                name="address"
+                value={formData.address}
+                onChange={handleChange}
+                className="pl-10 pr-4 py-2 w-full border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-300 focus:outline-none transition-all duration-150 ease-in-out"
+              />
+            </div>
+          </div>
+
+          {/* City */}
+          <div className="flex flex-col">
+            <label className="text-sm font-medium text-gray-500">City</label>
+            <div className="relative mt-1">
+              <MapPinIcon className="w-5 h-5 text-gray-400 absolute top-1/2 transform -translate-y-1/2 left-3" />
+              <input
+                type="text"
+                name="city"
+                value={formData.city}
+                onChange={handleChange}
+                className="pl-10 pr-4 py-2 w-full border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-300 focus:outline-none transition-all duration-150 ease-in-out"
+              />
+            </div>
+          </div>
+
+          {/* State */}
+          <div className="flex flex-col">
+            <label className="text-sm font-medium text-gray-500">State</label>
+            <div className="relative mt-1">
+              <MapPinIcon className="w-5 h-5 text-gray-400 absolute top-1/2 transform -translate-y-1/2 left-3" />
+              <input
+                type="text"
+                name="state"
+                value={formData.state}
+                onChange={handleChange}
+                className="pl-10 pr-4 py-2 w-full border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-300 focus:outline-none transition-all duration-150 ease-in-out"
+              />
+            </div>
+          </div>
+
+          {/* Password */}
+          <div className="flex flex-col md:col-span-2">
+            <label className="text-sm font-medium text-gray-500">Password</label>
+            <div className="relative mt-1">
+              <LockClosedIcon className="w-5 h-5 text-gray-400 absolute top-1/2 transform -translate-y-1/2 left-3" />
+              <input
+                type="password"
+                name="password"
+                value={formData.password}
+                onChange={handleChange}
+                className="pl-10 pr-4 py-2 w-full border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-300 focus:outline-none transition-all duration-150 ease-in-out"
+              />
+            </div>
           </div>
         </div>
-        <div className="px-6 py-4">
-          <div className="flex justify-between items-center mb-4">
-            <div>
-              <h1 className="text-3xl font-bold text-gray-900">{userInfo.name}</h1>
-              <p className="text-gray-600">{userInfo.bio}</p>
-            </div>
-            {!isEditing && (
-              <button
-                onClick={handleEditClick}
-                className="text-blue-500 hover:text-blue-700 flex items-center"
-              >
-                <FaEdit className="mr-2" /> Edit
-              </button>
-            )}
-          </div>
-          <div className="space-y-4">
-            <div>
-              <h2 className="text-xl font-semibold text-gray-800">Contact Information</h2>
-              <p className="text-gray-600">Email: {isEditing ? <input type="email" name="email" value={userInfo.email} onChange={handleChange} className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50" /> : userInfo.email}</p>
-              <p className="text-gray-600">Phone: {isEditing ? <input type="text" name="phone" value={userInfo.phone} onChange={handleChange} className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50" /> : userInfo.phone}</p>
-            </div>
-            <div>
-              <h2 className="text-xl font-semibold text-gray-800">Bio</h2>
-              {isEditing ? (
-                <textarea
-                  name="bio"
-                  value={userInfo.bio}
-                  onChange={handleChange}
-                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"
-                />
-              ) : (
-                <p className="text-gray-600">{userInfo.bio}</p>
-              )}
-            </div>
-            {isEditing && (
-              <div className="flex justify-end mt-4 space-x-2">
-                <button
-                  onClick={handleSaveClick}
-                  className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 flex items-center"
-                >
-                  <FaSave className="mr-2" /> Save
-                </button>
-                <button
-                  onClick={handleCancelClick}
-                  className="bg-gray-300 text-gray-800 px-4 py-2 rounded-md hover:bg-gray-400 flex items-center"
-                >
-                  <FaTimes className="mr-2" /> Cancel
-                </button>
-              </div>
-            )}
-          </div>
+
+        {/* Buttons */}
+        <div className="flex justify-between items-center mt-8">
+          <button
+            type="button"
+            className="flex items-center px-4 py-2 bg-red-400 text-white rounded-md hover:bg-red-500 transition-all duration-150 ease-in-out"
+          >
+            <XMarkIcon className="w-5 h-5 mr-2" />
+            Cancel
+          </button>
+          <button
+            type="submit"
+            className="flex items-center px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-all duration-150 ease-in-out"
+          >
+            <CheckIcon className="w-5 h-5 mr-2" />
+            Save
+          </button>
         </div>
-      </div>
+      </form>
     </div>
+    </>
   );
 };
 

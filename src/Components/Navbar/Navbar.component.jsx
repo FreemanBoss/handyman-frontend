@@ -33,7 +33,7 @@ const Navbar = () => {
   return (
     <>
       {/* NAVBAR SECTION */}
-      <nav className="bg-[#3e2723] text-white fixed top-0 left-0 w-full z-50">
+      <nav className="bg-[#3e2723] text-white fixed mb-32 top-0 left-0 w-full z-50">
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex justify-between items-center py-4">
             {/* Logo */}
@@ -73,8 +73,8 @@ const Navbar = () => {
               <a href="/about-us" className="text-base font-medium hover:text-[#ffcc80]">
                 About
               </a>
-              <a href="#" className="text-base font-medium hover:text-[#ffcc80]">
-                Services
+              <a href="/craftsmen" className="text-base font-medium hover:text-[#ffcc80]">
+               Craftsmen
               </a>
               <a href="#" className="text-base font-medium hover:text-[#ffcc80]">
                 Contact
