@@ -38,10 +38,10 @@ const Navbar = () => {
           <div className="flex justify-between items-center py-4">
             {/* Logo */}
             <div className="flex-shrink-0">
-            <a href="/" className="text-4xl text-[#ffcc80] font-bold" data-aos='fade-right'>
+            <a href="/" className="text-4xl  text-[#ffcc80] font-bold" data-aos='fade-right'>
               <img 
             src='../../../public/images/flat-design-handyman-logo (1).png' 
-            className='w-24 h-10 mr-8 max-w-full object-contain' 
+            className='w-24 h-10 max-w-full object-contain' 
             alt="Handyman Logo"
           />
               </a>
@@ -197,7 +197,7 @@ const Navbar = () => {
               </a>
               <a
                 href="/auth/signup"
-                className="block px-4 py-2 bg-[#ffcc80] text-white rounded-md font-medium hover:bg-[#3e2723]"
+                className="block mr-8 px-2 py-2 bg-[#ffcc80] text-white rounded-md font-medium hover:bg-[#3e2723]"
               >
                 Sign Up
               </a>

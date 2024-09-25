@@ -6,7 +6,6 @@ const features = ()=> {
         
   {/* Feature Section */}
   <section className="bg-[#3e2723] text-[#f4ece4] py-16">
-    {" "}
     {/* Dark brown background, light beige text */}
     <div className="container mx-auto flex flex-col md:flex-row items-center px-6">
       <div className="md:w-1/2" data-aos='fade-right'>

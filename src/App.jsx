@@ -26,10 +26,10 @@ function App() {
 
   useEffect(()=>{
     Aos.init({
-      duration: 1000,
+      duration: 500,
       offset: 200,
       easing: 'ease-in-out',
-      delay: 20,
+      delay: 0,
       // once: true
     })
   })

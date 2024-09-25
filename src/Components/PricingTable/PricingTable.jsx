@@ -5,14 +5,13 @@ const PricingTable = () => {
     <>
   {/* Pricing Table Section */}
   <section className="bg-[#f4ece4] py-16">
-    {" "}
     {/* Seabreeze background for section */}
     <div className="container mx-auto px-6">
-      <h3 className="text-3xl font-bold text-center text-[#3e2723] mb-8">
+      <h3 className="text-3xl font-bold text-center text-[#3e2723] mb-8" data-aos='fade-up'>
         Affordable Prices
       </h3>
       <div className="flex flex-wrap justify-center gap-8">
-        <div className="w-full sm:w-1/3 bg-[#3e2723] p-6 rounded-lg shadow-lg">
+        <div className="w-full sm:w-1/3 bg-[#3e2723] p-6 rounded-lg shadow-lg" data-aos='fade-up'>
           <h4 className="text-2xl font-bold mb-4 text-[#ffcc80]">Basic Pack</h4>
           <p className="text-[#ffcc80] mb-6">
           Our Basic Pack is designed for minor repairs and maintenance 
@@ -24,10 +23,10 @@ const PricingTable = () => {
           </div>
           <button className="bg-[#3e2723] text-white px-6 py-3 rounded-full hover:bg-[#ffcc80]">
             Buy Now
-          </button>{" "}
+          </button>
           {/* Darker shade on hover */}
         </div>
-        <div className="w-full sm:w-1/3 bg-[#3e2723] p-6 rounded-lg shadow-lg">
+        <div className="w-full sm:w-1/3 bg-[#3e2723] p-6 rounded-lg shadow-lg" data-aos='fade-up'>
           <h4 className="text-2xl font-bold mb-4 text-[#ffcc80]">
             Extended Pack
           </h4>
@@ -42,10 +41,10 @@ const PricingTable = () => {
           </div>
           <button className="bg-[#3e2723] text-white px-6 py-3 rounded-full hover:bg-[#ffcc80]">
             Buy Now
-          </button>{" "}
+          </button>
           {/* Darker shade on hover */}
         </div>
-        <div className="w-full sm:w-1/3 bg-[#3e2723] p-6 rounded-lg shadow-lg">
+        <div className="w-full sm:w-1/3 bg-[#3e2723] p-6 rounded-lg shadow-lg" data-aos='fade-up'>
           <h4 className="text-[#ffcc80]-2x1 font-bold mb-4 text-[#ffcc80]">
             Premium Pack
           </h4>
