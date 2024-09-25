@@ -33,13 +33,17 @@ const Navbar = () => {
   return (
     <>
       {/* NAVBAR SECTION */}
-      <nav className="bg-[#3e2723] text-white fixed mb-32 top-0 left-0 w-full z-50">
+      <nav className="bg-[#3e2723] text-white fixed top-0 left-0 w-full z-50" data-aos='fade-down'>
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex justify-between items-center py-4">
             {/* Logo */}
             <div className="flex-shrink-0">
-              <a href="#" className="text-4xl text-[#ffcc80] font-bold">
-                HANDYMAN
+            <a href="/" className="text-4xl text-[#ffcc80] font-bold" data-aos='fade-right'>
+              <img 
+            src='../../../public/images/flat-design-handyman-logo (1).png' 
+            className='w-24 h-10 mr-8 max-w-full object-contain' 
+            alt="Handyman Logo"
+          />
               </a>
             </div>
             {/* Hamburger Icon (for mobile) */}
@@ -76,7 +80,7 @@ const Navbar = () => {
               <a href="/craftsmen" className="text-base font-medium hover:text-[#ffcc80]">
                Craftsmen
               </a>
-              <a href="#" className="text-base font-medium hover:text-[#ffcc80]">
+              <a href="/contactform" className="text-base font-medium hover:text-[#ffcc80]">
                 Contact
               </a>
               {/* Conditional Rendering of Avatar and Auth Links */}
@@ -119,13 +123,12 @@ const Navbar = () => {
                 </div>
               ) : (
                 <>
-                  <Link to="/auth/signin" className="text-base font-medium hover:text-[#ffcc80] mt-2">
+                  <Link to="/auth/signin" className="text-base  font-medium hover:text-[#ffcc80]">
                     Sign In
                   </Link>
                   <Link
                     to="/auth/signup"
-                    className="px-4 py-2 bg-[#ffcc80] text-white rounded-md font-medium hover:bg-[#3e2723]"
-                  >
+                    className="px-4 py-2 bg-[#ffcc80] text-white rounded-md font-medium hover:bg-[#3e2723]">
                     Sign Up
                   </Link>
                 </>
@@ -147,7 +150,7 @@ const Navbar = () => {
           <a href="/craftsmen" className="block text-base font-medium hover:text-[#ffcc80]">
           Craftsmen
           </a>
-          <a href="#" className="block text-base font-medium hover:text-[#ffcc80]">
+          <a href="/contactform" className="block text-base font-medium hover:text-[#ffcc80]">
             Contact
           </a>
           {isAuthenticated ? (
