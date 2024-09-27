@@ -5,8 +5,8 @@ const Footer = () => {
     <>
   {/* footer  */}
   <footer className="bg-[#3e2723]  text-gray-600 py-8">
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+    <div className="max-w-7xl px-2 sm:px-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8" data-aos="fade-up">
         {/* About Us */}
         <div>
           <h3 className="text-[#ffcc80] font-bold mb-4">About Us</h3>
@@ -16,24 +16,11 @@ const Footer = () => {
           with a commitment to customer satisfaction. 
           
           </p>
-          <div className="flex space-x-3">
-            <a href="#" className="text-[#ffcc80] hover:text-white-700">
-              <i className="fa-brands fa-square-whatsapp" />
-            </a>
-            <a href="#" className="text-[#ffcc80] hover:text-white-700">
-              <i className="fa-brands fa-square-x-twitter" />
-            </a>
-            <a href="#" className="text-[#ffcc80] hover:text-white-700">
-              <i className="fa-brands fa-square-instagram" />
-            </a>
-            <a href="#" className="text-[#ffcc80] hover:text-white-700">
-              <i className="fa-brands fa-linkedin" />
-            </a>
-          </div>
         </div>
+
         {/* Support */}
-        <div>
-          <h3 className="text-[#ffcc80] font-bold mb-4">Support</h3>
+        <div className="lg:pl-20 ">
+          <h3 className="text-[#ffcc80] font-bold mb-4 ">Support</h3>
           <ul className="space-y-2">
             <li>
               <a href="#" className="text-[#ffcc80] hover:underline">
@@ -57,6 +44,7 @@ const Footer = () => {
             </li>
           </ul>
         </div>
+        
         {/* Contact Us */}
         <div>
           <h3 className="text-[#ffcc80] font-bold mb-4">Contact Us</h3>
@@ -68,16 +56,16 @@ const Footer = () => {
               <i className="fas fa-envelope mr-2" /> knowmore@mail.com
             </li>
             <a href="#" className="text-[#ffcc80] hover:text-gray-900 text-3xl">
-              <i className="fa-brands fa-square-whatsapp" />
+              <i className="fa-brands fa-square-whatsapp mr-2" />
             </a>
             <a href="#" className="text-[#ffcc80] hover:text-gray-900 text-3xl">
-              <i className="fa-brands fa-square-x-twitter" />
+              <i className="fa-brands fa-square-x-twitter mr-2" />
             </a>
             <a href="#" className="text-[#ffcc80] hover:text-gray-900 text-3xl">
-              <i className="fa-brands fa-square-instagram" />
+              <i className="fa-brands fa-square-instagram mr-2" />
             </a>
             <a href="#" className="text-[#ffcc80] hover:text-gray-900 text-3xl">
-              <i className="fa-brands fa-linkedin" />
+              <i className="fa-brands fa-linkedin mr-2" />
             </a>
           </ul>
         </div>

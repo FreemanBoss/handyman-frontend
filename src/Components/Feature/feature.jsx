@@ -6,10 +6,9 @@ const features = ()=> {
         
   {/* Feature Section */}
   <section className="bg-[#3e2723] text-[#f4ece4] py-16">
-    {" "}
     {/* Dark brown background, light beige text */}
     <div className="container mx-auto flex flex-col md:flex-row items-center px-6">
-      <div className="md:w-1/2">
+      <div className="md:w-1/2" data-aos='fade-right'>
         <h2 className="text-4xl font-bold mb-4">
           We Provide the Guaranteed Quality in Repairing
         </h2>
@@ -31,7 +30,7 @@ const features = ()=> {
           </a>
         </div>
       </div>
-      <div className="md:w-1/2 flex justify-center">
+      <div className="md:w-1/2 flex justify-center" data-aos='fade-left'>
         <div className="relative">
           <img
             src="/images/plumbing-professional.jpg"
@@ -39,12 +38,10 @@ const features = ()=> {
             className="rounded-lg shadow-lg"
           />
           <div className="absolute bottom-0 left-0 bg-[#ffb74d] text-[#3e2723] font-bold p-4 rounded-r-lg">
-            {" "}
             {/* Bright orange label */}
             <span>290+</span> Projects Done
           </div>
           <div className="absolute bottom-0 right-0 bg-[#f57c00] text-white font-bold p-4 rounded-l-lg">
-            {" "}
             {/* Darker orange label */}
             <span>34</span> Branches
           </div>

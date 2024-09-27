@@ -14,7 +14,7 @@ const Contact = () => {
           Our Team Is Ready and Always Available
         </h3>
         <button className="mt-6 px-6 py-3 bg-yellow-500 text-white font-semibold rounded-md hover:bg-yellow-600">
-          Contact Us
+          <a href="/contactform">Contact Us </a>
         </button>
       </div>
       <img

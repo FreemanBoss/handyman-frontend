@@ -1,3 +1,4 @@
+
 import './Gallery.css'
 
 const Gallery = () => {
@@ -6,62 +7,70 @@ const Gallery = () => {
   {/* Image Scrolling Section */}
   <div className="overflow-hidden relative">
     <div className="flex animate-scroll">
-      <div className="flex-none w-50 md:w-2/12">
+      <div className="flex-none w-1/2 md:w-1/4">
         <img
-          className="w-50 h-48 object-contain"
-          src="/images/cleaning_img.jpg"
+          className="w-full h-48 object-contain"
+          src="../../../images/cleaning_img.jpg"
           alt="Image 1"
+          data-aos='zoom-in'
         />
       </div>
-      <div className="flex-none w-50 md:w-2/12">
+      <div className="flex-none w-1/2 md:w-1/4">
         <img
-          className="w-50 h-48 object-contain"
-          src="/images/plumbing.jpg"
+          className="w-full h-48 object-contain"
+          src="../../../images/plumbing.jpg"
           alt="Image 2"
+          data-aos='zoom-in'
         />
       </div>
-      <div className="flex-none w-50 md:w-2/12">
+      <div className="flex-none w-1/2 md:w-1/4">
         <img
-          className="w-50 h-48 object-contain"
-          src="/images/cleaning4.jpg"
+          className="w-full h-48 object-contain"
+          src="../../../images/cleaning4.jpg"
           alt="Image 3"
+          data-aos='zoom-in'
         />
       </div>
-      <div className="flex-none w-50 md:w-2/12">
+      <div className="flex-none w-1/2 md:w-1/4">
         <img
-          className="w-50 h-48 object-contain"
-          src="/images/AirConditioning.jpg"
+          className="w-full h-48 object-contain"
+          src="../../../images/AirConditioning.jpg"
           alt="Image 4"
+          data-aos='zoom-in'
         />
       </div>
       
       {/* Duplicate images to ensure continuous scrolling */}
-      <div className="flex-none w-full md:w-1/4">
+      <div className="flex-none w-1/2 md:w-1/4">
         <img
-          className="w-50 h-48 object-contain"
-          src="/images/cleaning_img.jpg"
+          className="w-full h-48 object-contain"
+          src="../../../images/cleaning_img.jpg"
           alt="Image 1"
+          data-aos='zoom-in'
         />
       </div>
-      <div className="flex-none w-full md:w-1/4">
+      <div className="flex-none w-1/2 md:w-1/4">
         <img
-          className="w-50 h-48 object-contain"
-          src="/images/plumbing.jpg"
+          className="w-full h-48 object-contain"
+          src="../../../images/plumbing.jpg"
           alt="Image 2"
+          data-aos='zoom-in'
         />
       </div>
-      <div className="flex-none w-full md:w-1/4">
+      <div className="flex-none w-1/2 md:w-1/4">
         <img
-          className="w-50 h-48 object-contain"
-          src="/images/cleaning4.jpg"
+          className="w-full h-48 object-contain"
+          src="../../../images/cleaning4.jpg"
           alt="Image 3"
+          data-aos='zoom-in'
         />
       </div>
-      <div className="flex-none w-full md:w-1/4">
+      <div className="flex-none w-1/2 md:w-1/4">
         <img
-          className="w-50 h-48 object-contain"
-          src="/images/AirConditioning.jpg"
+          className="w-full h-48 object-contain"
+          src="../../../images/AirConditioning.jpg"
           alt="Image 4"
+          data-aos='zoom-in'
         />
       </div>
     </div>
@@ -72,4 +81,3 @@ const Gallery = () => {
 }
 
 export default Gallery
-

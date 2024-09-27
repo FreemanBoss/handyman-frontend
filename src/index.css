@@ -15,6 +15,9 @@
 body {
   background: #f5f5f5f5;
 }
+body, html{
+  overflow-x: hidden;
+}
 
 .container {
   padding: 0 30px;

@@ -14,8 +14,26 @@ import Form from "./Components/selectFrom.jsx";
 import AboutUsPage from './Pages/aboutUs.page.jsx'
 import CraftsmenPage from './Pages/CraftsmenPage.jsx';
 import NotFoundPage from './Pages/notFound.page.jsx'
+import ContactForm from "./Pages/contactform.jsx";
+
+import { useEffect } from "react";
+import Aos from "aos";
+import 'aos/dist/aos.css';
+
+import './tailwind-output.css';
 
 function App() {
+
+  useEffect(()=>{
+    Aos.init({
+      duration: 500,
+      offset: 200,
+      easing: 'ease-in-out',
+      delay: 0,
+      // once: true
+    })
+  })
+
   useTokenRefresh();
   return (
     <Router>
@@ -28,6 +46,7 @@ function App() {
         <Route path="/auth/signup" element={<SignUpPage />} />
         <Route path="/about-us" element={<AboutUsPage />} />
         <Route path="/craftsmen/:craftsmanId?" element={<CraftsmenPage />} />
+        <Route path="/contactform" element={<ContactForm />}/>
         {/* <Route path="/userType" element={<Form/>} />       */}
         {/* This is how you should implement the ProtectedRoute */}
 

@@ -1,26 +1,32 @@
 /* Define the scrolling animation */
 @keyframes scroll {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
+  0% {
+    transform: translateX(0);
   }
-  
-  /* Container to hold the scrolling images */
-  .overflow-hidden {
-    overflow: hidden;
+  100% {
+    transform: translateX(-100%);
   }
-  
-  /* Animate the images */
+}
+
+/* Container to hold the scrolling images */
+.overflow-hidden {
+  overflow: hidden;
+}
+
+/* Animate the images */
+.animate-scroll {
+  display: flex;
+  width: 90%; /* Adjust based on the number of images */
+  animation: scroll 20s linear infinite;
+}
+
+@media screen and (max-width: 768px) {
   .animate-scroll {
-    display: flex;
-    width: 200%; /* Adjust based on the number of images */
-    animation: scroll 20s linear infinite;
+    width: 160%; /* Adjust container width for smaller screens */
   }
-  
-  /* Each image container */
-  .flex-none {
-    flex: 0 0 auto;
-  }
+}
+
+/* Each image container */
+.flex-none {
+  flex: 0 0 auto;
+}
