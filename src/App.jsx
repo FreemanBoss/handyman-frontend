@@ -14,7 +14,7 @@ import Form from "./Components/selectFrom.jsx";
 import AboutUsPage from './Pages/aboutUs.page.jsx'
 import CraftsmenPage from './Pages/CraftsmenPage.jsx';
 import NotFoundPage from './Pages/notFound.page.jsx'
-import ContactForm from "./Pages/ContactForm.jsx";
+import ContactForm from "./Pages/contactform.jsx";
 
 import { useEffect } from "react";
 import Aos from "aos";
