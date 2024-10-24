@@ -1,13 +1,13 @@
 import SignUpForm from '../../Components/Auth/siginup.component.auth'
-import { useDispatch } from 'react-redux';
-import { performGoogleAuth } from '../../features/auth/authThunks';
+// import { useDispatch } from 'react-redux';
+// import { performGoogleAuth } from '../../features/auth/authThunks';
 import { GoogleOAuthProvider, GoogleLogin} from '@react-oauth/google';
 import { useSearchParams } from 'react-router-dom';
 import { useEffect } from 'react';
 import { toast} from 'react-toastify';
 
 const SignUpPage = () => {
-  const dispatch = useDispatch()
+  // const dispatch = useDispatch()
    const [searchParams] = useSearchParams();
 
 
@@ -24,12 +24,15 @@ const SignUpPage = () => {
   // }
 
   const handleGoogleSuccess = (credentialResponse) => {
-    const token = credentialResponse.credential;
-    dispatch(performGoogleAuth(token)); // Dispatch token to perform Google authentication
+    console.log("Google Credential Response:", credentialResponse);
+    // const token = credentialResponse.credential;
+    // dispatch(performGoogleAuth(token)); // Dispatch token to perform Google authentication
   };
 
-  const handleGoogleFailure = () => {
-    toast.error('Google authentication failed. Please try again.');
+  const handleGoogleFailure = (error) => {
+    // toast.error('Google authentication failed. Please try again.');
+    console.error("Google Login Error:", error); // Log the full error
+  toast.error("Google authentication failed. Please try again.");
   };
 
   return (
@@ -42,7 +45,7 @@ const SignUpPage = () => {
           </p>
 
            {/* Google OAuthProvider for Google Authentication */}
-           <GoogleOAuthProvider  clientId={import.meta.env.VITE_GOOGLE_CLIENT_ID}>
+           <GoogleOAuthProvider  clientId="537851239903-1iqb57cnfi3fm6gnv6hln6dg3n4pg14l.apps.googleusercontent.com">
             <GoogleLogin
               onSuccess={handleGoogleSuccess}
               onError={handleGoogleFailure}

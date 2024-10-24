@@ -1,18 +1,18 @@
 // import { useState } from "react";
 import LoginForm from "../../Components/Auth/Login.auth";
 import { GoogleOAuthProvider, GoogleLogin} from '@react-oauth/google';
-import { useDispatch } from 'react-redux';
-import { performGoogleAuth } from '../../features/auth/authThunks';
+// import { useDispatch } from 'react-redux';
+// import { performGoogleAuth } from '../../features/auth/authThunks';
 import { toast} from 'react-toastify';
 
 
 const LoginPage = () => {
-    const dispatch = useDispatch()
+    // const dispatch = useDispatch()
 
-  const handleGoogleSuccess = (credentialResponse) => {
-    const token = credentialResponse.credential;
-    dispatch(performGoogleAuth(token)); // Dispatch token to perform Google authentication
-  };
+  // const handleGoogleSuccess = (credentialResponse) => {
+  //   // const token = credentialResponse.credential;
+  //   // dispatch(performGoogleAuth(token)); // Dispatch token to perform Google authentication
+  // };
 
   const handleGoogleFailure = () => {
     toast.error('Google authentication failed. Please try again.');
@@ -32,13 +32,14 @@ const LoginPage = () => {
 
            
           {/* Google OAuthProvider for Google Authentication */}
-          <GoogleOAuthProvider  clientId={import.meta.env.VITE_GOOGLE_CLIENT_ID}>
+          <GoogleOAuthProvider  clientId="537851239903-1iqb57cnfi3fm6gnv6hln6dg3n4pg14l.apps.googleusercontent.com">
             <GoogleLogin
-              onSuccess={handleGoogleSuccess}
+              // onSuccess={handleGoogleSuccess}
               onError={handleGoogleFailure}
               shape="rectangular"
               theme="filled_blue"
               size="large"
+              prompt="consent"
               text="signin_with"
             />
           </GoogleOAuthProvider>
